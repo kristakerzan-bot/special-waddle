@@ -72,10 +72,10 @@ export default function Hero() {
 
                 <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
                   <Image
-                    src="/images/profile-photo.svg"
-                    alt="Placeholder portrait — replace with a real photo"
+                    src="/images/profile-photo.jpg"
+                    alt="Krista, UX/Product Design Lead"
                     fill
-                    unoptimized
+                    sizes="(max-width: 768px) 100vw, 448px"
                     className="object-cover"
                   />
                   <span className="absolute right-4 top-4 -rotate-2 rounded bg-accent px-2 py-1 font-mono text-[8px] text-white">

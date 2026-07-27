@@ -286,28 +286,22 @@ export default function PlayerProfileCaseStudy() {
       <section className="bg-[#0a0a0f] px-6 py-24 md:px-32">
         <Reveal className="flex flex-col gap-12">
           <div className="flex flex-col gap-2">
-            <MetaLabel>Shipped Redesign · Player Profile v3</MetaLabel>
+            <MetaLabel>Player Profile · Selected Screens</MetaLabel>
             <h2 className="font-display text-3xl italic text-text-primary md:text-4xl">
-              The redesigned experience
+              Inside the interface
             </h2>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             {gallery.map((item, index) => (
               <Reveal key={item.label} delay={index * 60} className="flex flex-col gap-3">
                 <div className="relative h-[240px] w-full overflow-hidden rounded-lg border border-white/10 bg-surface">
-                  {item.image ? (
-                    <Image
-                      src={item.image}
-                      alt={`${item.label} — ${item.caption}`}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      className="object-cover object-top"
-                    />
-                  ) : (
-                    <p className="absolute inset-0 flex items-center justify-center text-center font-sans text-sm text-text-muted">
-                      ↑ Drop screenshot here
-                    </p>
-                  )}
+                  <Image
+                    src={item.image}
+                    alt={`${item.label} — ${item.caption}`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover object-top"
+                  />
                 </div>
                 <p className="font-sans text-sm text-text-muted">
                   {item.caption}

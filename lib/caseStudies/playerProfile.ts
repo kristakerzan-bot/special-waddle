@@ -309,36 +309,67 @@ export const nextSteps = {
 export const gallery: {
   label: string;
   caption: string;
-  image: string | null;
+  image: string;
 }[] = [
   {
     label: "Profile Overview",
-    caption: "Role-aware dashboard with dynamic surfacing",
+    caption: "Account overview with financial activity and game category breakdown.",
     image: "/images/projects/player-profile-3.png",
   },
   {
-    label: "Transaction History",
-    caption: "Improved status visibility & inline filtering",
+    label: "Balance & Transactions",
+    caption: "Full transaction history with type, method, and status per entry.",
     image: "/images/projects/player-profile-4.png",
   },
   {
-    label: "Risk & Compliance",
-    caption: "Unified risk rail with event timeline",
+    label: "Games Played",
+    caption: "Wagering breakdown by game category with full session history.",
+    image: "/images/projects/player-profile-5.png",
+  },
+  {
+    label: "Payment Methods",
+    caption: "Saved payment methods with usage history and management actions.",
+    image: "/images/projects/player-profile-7.png",
+  },
+  {
+    label: "Activity Log",
+    caption:
+      "Chronological player activity — logins, deposits, bonuses, verification events.",
+    image: "/images/projects/player-profile-1.png",
+  },
+  {
+    label: "Bonus Eligibility",
+    caption: "Bonus history and eligibility scoring for marketing campaigns.",
+    image: "/images/projects/player-profile-9.png",
+  },
+  {
+    label: "Responsible Gaming",
+    caption: "Deposit, withdrawal, and loss limits shown as usage progress bars.",
+    image: "/images/projects/player-profile-6.png",
+  },
+  {
+    label: "Fraud & Risk Dashboard",
+    caption: "Fraud score, risk signals, and recent alerts in one view.",
     image: "/images/projects/player-profile-8.png",
   },
   {
-    label: "KYC Verification",
-    caption: "Streamlined document review workflow",
+    label: "KYC Documents",
+    caption: "Document status, review dates, and verification history.",
     image: "/images/projects/player-profile-11.png",
   },
   {
-    label: "Player Search",
-    caption: "Redesigned search with role-aware filters",
-    image: null,
+    label: "Compliance & AML",
+    caption: "AML checks, marketing consent, and account flags side by side.",
+    image: "/images/projects/player-profile-2.png",
   },
   {
-    label: "Correspondence Log",
-    caption: "Consolidated communication timeline",
-    image: null,
+    label: "Compare Players",
+    caption: "Side-by-side comparison view for cross-referencing two player accounts.",
+    image: "/images/projects/player-profile-10.png",
+  },
+  {
+    label: "Duplicate Account Check",
+    caption: "Automated duplicate-account detection with confidence-scored matches.",
+    image: "/images/projects/player-profile-13.png",
   },
 ];

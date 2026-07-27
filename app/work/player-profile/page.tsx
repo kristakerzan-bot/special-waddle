@@ -300,7 +300,7 @@ export default function PlayerProfileCaseStudy() {
                     alt={`${item.label} — ${item.caption}`}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-contain"
+                    className="object-cover object-top"
                   />
                 </div>
                 <p className="font-sans text-sm text-text-muted">

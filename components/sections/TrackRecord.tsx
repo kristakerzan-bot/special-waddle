@@ -9,7 +9,7 @@ const ROLES = [
     meta: "Bragg Gaming // 2016 – Present",
     badge: "30 → 450+ Growth",
     active: true,
-    body: "Owning the experience layer across 11 product domains. Built the platform's design system under strict regulatory constraints.",
+    body: "Owning the experience layer across 9 product domains. Built the platform's design system under strict regulatory constraints.",
   },
   {
     title: "Senior Product Designer",

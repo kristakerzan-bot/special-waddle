@@ -6,7 +6,7 @@ import AnimatedBar from "@/components/primitives/AnimatedBar";
 
 const STATS = [
   { value: "20y+", label: "Industry Depth" },
-  { value: "11+", label: "Technical Domains" },
+  { value: "9+", label: "Technical Domains" },
 ];
 
 const METHODS = [

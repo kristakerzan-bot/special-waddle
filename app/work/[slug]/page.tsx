@@ -57,14 +57,21 @@ export default async function ProjectPage({
           </p>
         </div>
 
-        <div className="relative aspect-[683/367] w-full overflow-hidden rounded-2xl border border-white/10 bg-surface">
-          <Image
-            src={project.coverImage}
-            alt=""
-            fill
-            unoptimized
-            className="object-cover"
-          />
+        <div className="flex flex-col gap-6">
+          {project.gallery.map((image, index) => (
+            <div
+              key={image}
+              className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/10 bg-surface"
+            >
+              <Image
+                src={image}
+                alt={`${project.title} — screen ${index + 1}`}
+                fill
+                unoptimized
+                className="object-contain"
+              />
+            </div>
+          ))}
         </div>
 
         <p className="max-w-2xl font-sans text-sm text-text-muted">

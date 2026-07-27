@@ -32,10 +32,9 @@ export default function PortfolioOverview() {
           <div className="relative w-full max-w-2xl overflow-hidden rounded-2xl border border-white/10 bg-surface p-2 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)]">
             <div className="relative aspect-[683/367] w-full overflow-hidden rounded-xl">
               <Image
-                src="/images/projects/process-dashboard.svg"
-                alt="Placeholder — replace with the Player Profile dashboard screenshot"
+                src="/images/projects/player-profile-3.png"
+                alt="Player Profile dashboard — account overview with financial activity chart"
                 fill
-                unoptimized
                 className="object-cover"
               />
             </div>

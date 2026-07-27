@@ -4,7 +4,13 @@ export type Project = {
   title: string;
   summary: string;
   coverImage: string;
+  gallery: string[];
 };
+
+const playerProfileGallery = Array.from(
+  { length: 13 },
+  (_, i) => `/images/projects/player-profile-${i + 1}.png`,
+);
 
 export const projects: Project[] = [
   {
@@ -13,7 +19,8 @@ export const projects: Project[] = [
     title: "Player Profile",
     summary:
       "Optimized administrative tools built to handle massive complex user profiles while seamlessly ensuring jurisdiction-level legal compliance and guardrails.",
-    coverImage: "/images/projects/player-profile.svg",
+    coverImage: "/images/projects/player-profile-3.png",
+    gallery: playerProfileGallery,
   },
   {
     slug: "payments",
@@ -22,6 +29,7 @@ export const projects: Project[] = [
     summary:
       "Streamlined multicurrency ledger entries with bulletproof validation design, reducing transactional drop-off rates and visual backoffice noise.",
     coverImage: "/images/projects/payments.svg",
+    gallery: ["/images/projects/payments.svg"],
   },
   {
     slug: "integration-configuration",
@@ -30,6 +38,7 @@ export const projects: Project[] = [
     summary:
       "A visual modular mapping console letting engineers and external vendors wire integrations securely without direct code configuration.",
     coverImage: "/images/projects/integration-configuration.svg",
+    gallery: ["/images/projects/integration-configuration.svg"],
   },
 ];
 

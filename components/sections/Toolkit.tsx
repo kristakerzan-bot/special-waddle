@@ -5,8 +5,10 @@ const TOOLS = [
   "Figma / Figma Make",
   "UX Pilot / AI-fluent",
   "Claude / FigJam",
+  "GitHub",
   "Miro / Maze",
   "Adobe Creative Suite",
+  "Earlier: InVision",
 ];
 
 const EXPERTISE = [
@@ -47,7 +49,7 @@ export default function Toolkit() {
                   index === TOOLS.length - 1 ? "italic opacity-50 text-xs" : ""
                 }`}
               >
-                {index === TOOLS.length - 1 ? `Earlier: ${tool}` : tool}
+                {tool}
               </li>
             ))}
           </ul>

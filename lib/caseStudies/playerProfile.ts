@@ -361,4 +361,19 @@ export const gallery: {
     caption: "Deposit and withdrawal history with method, PSP, and status per entry.",
     image: "/images/projects/player-profile-12-payments-transactions.png",
   },
+  {
+    label: "Edit Personal Info",
+    caption: "Editable personal information fields with save and cancel actions.",
+    image: "/images/projects/player-profile-13-overview-edit.png",
+  },
+  {
+    label: "Compare Players",
+    caption: "Side-by-side comparison of two accounts across identity, account, and financial attributes.",
+    image: "/images/projects/player-profile-14-compare-players.png",
+  },
+  {
+    label: "Player Search",
+    caption: "Filterable player directory with VIP tier, KYC status, and risk-level facets.",
+    image: "/images/projects/player-profile-15-player-search.png",
+  },
 ];

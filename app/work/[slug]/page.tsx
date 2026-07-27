@@ -5,10 +5,12 @@ import { notFound } from "next/navigation";
 import Container from "@/components/primitives/Container";
 import { getProject, projects } from "@/lib/projects";
 
-// player-profile has its own dedicated page at app/work/player-profile/page.tsx
+// player-profile and payments have their own dedicated pages
+const DEDICATED_SLUGS = ["player-profile", "payments"];
+
 export function generateStaticParams() {
   return projects
-    .filter((project) => project.slug !== "player-profile")
+    .filter((project) => !DEDICATED_SLUGS.includes(project.slug))
     .map((project) => ({ slug: project.slug }));
 }
 

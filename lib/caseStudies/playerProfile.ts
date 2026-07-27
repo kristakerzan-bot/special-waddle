@@ -179,7 +179,7 @@ export const usabilitySeverityCounts = [
 
 export type Finding = {
   name: string;
-  severity: "high" | "medium" | "low";
+  severity: "critical" | "high" | "medium" | "low";
   body: string;
 };
 

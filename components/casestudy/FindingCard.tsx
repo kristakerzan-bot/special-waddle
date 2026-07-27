@@ -1,6 +1,7 @@
 import type { Finding } from "@/lib/caseStudies/playerProfile";
 
 const SEVERITY_STYLES = {
+  critical: "border-red-600 bg-red-600/15 text-red-600",
   high: "border-red-500 bg-red-500/10 text-red-500",
   medium: "border-amber-500 bg-amber-500/10 text-amber-500",
   low: "border-blue-500 bg-blue-500/10 text-blue-500",

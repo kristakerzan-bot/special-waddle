@@ -5,8 +5,11 @@ import { notFound } from "next/navigation";
 import Container from "@/components/primitives/Container";
 import { getProject, projects } from "@/lib/projects";
 
+// player-profile has its own dedicated page at app/work/player-profile/page.tsx
 export function generateStaticParams() {
-  return projects.map((project) => ({ slug: project.slug }));
+  return projects
+    .filter((project) => project.slug !== "player-profile")
+    .map((project) => ({ slug: project.slug }));
 }
 
 export async function generateMetadata({

@@ -36,6 +36,7 @@ export default function PortfolioOverview() {
                 src="/images/projects/player-profile-3.png"
                 alt="Player Profile dashboard — account overview with financial activity chart"
                 fill
+                sizes="(max-width: 768px) 100vw, 672px"
                 className="object-cover"
               />
             </div>

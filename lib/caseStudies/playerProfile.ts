@@ -322,11 +322,6 @@ export const gallery: {
     image: "/images/projects/player-profile-02-vip-profile.png",
   },
   {
-    label: "Payments Account Summary",
-    caption: "Account summary and activity trends surfaced under Payments.",
-    image: "/images/projects/player-profile-03-payments-account-summary.png",
-  },
-  {
     label: "Fraud & Risk Dashboard",
     caption: "Fraud score, risk signals, and recent alerts in one view.",
     image: "/images/projects/player-profile-04-fraud-and-risk-dashboard.png",
@@ -360,11 +355,6 @@ export const gallery: {
     label: "VIP Games Played",
     caption: "Wagering breakdown by category with full game-level session history.",
     image: "/images/projects/player-profile-10-vip-games-played.png",
-  },
-  {
-    label: "Deposit Limits",
-    caption: "Player-configurable deposit, withdrawal, and loss limits.",
-    image: "/images/projects/player-profile-11-deposit-limits.png",
   },
   {
     label: "Transactions",

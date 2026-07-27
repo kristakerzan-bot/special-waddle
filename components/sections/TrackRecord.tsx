@@ -9,7 +9,7 @@ const ROLES = [
     meta: "Bragg Gaming // 2016 – Present",
     badge: "30 → 450+ Growth",
     active: true,
-    body: "Owning the experience layer across 9 product domains. Built the platform's design system under strict regulatory constraints.",
+    body: "Owning the experience layer across 9 product domains. Led end-to-end UX research — interviews, surveys, usability testing — to validate every major pattern before it shipped, built and maintain the platform's design system under strict regulatory constraints, and partnered directly with engineering, compliance, and stakeholders to turn findings into production-ready prototypes.",
   },
   {
     title: "Senior Product Designer",

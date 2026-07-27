@@ -16,7 +16,7 @@ const ROLES = [
     meta: "Celtra // 2011 – 2016",
     badge: "Ad-Tech Platform",
     active: false,
-    body: "Lead UX Designer for the platform. Collaborated in a cross-functional team including Engineering, QA, and Product Owners to scale technical patterns for speed and pragmatism.",
+    body: "Senior Product Designer for the platform. Collaborated in a cross-functional team including Engineering, QA, and Product Owners to scale technical patterns for speed and pragmatism.",
   },
   {
     title: "Web & Digital Designer",

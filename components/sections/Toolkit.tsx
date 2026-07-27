@@ -1,0 +1,96 @@
+import Container from "@/components/primitives/Container";
+
+const TOOLS = [
+  "Figma / Figma Make",
+  "UX Pilot / AI-fluent",
+  "Claude / FigJam",
+  "Miro / Maze",
+  "Adobe Creative Suite",
+];
+
+const EXPERTISE = [
+  "Enterprise B2B SaaS",
+  "Regulated Environments",
+  "Workflow & Task Analysis",
+  "Design Systems",
+  "Team Mentorship",
+];
+
+const LANGUAGES = [
+  { name: "Slovenian", level: "Native" },
+  { name: "English", level: "Fluent" },
+  { name: "Croatian", level: "Fluent" },
+  { name: "Italian", level: "Conversational" },
+  { name: "Spanish", level: "Basic" },
+];
+
+function ColumnHeading({ children }: { children: React.ReactNode }) {
+  return (
+    <p className="font-sans text-[10px] font-bold uppercase tracking-[0.1em] text-text-muted">
+      {children}
+    </p>
+  );
+}
+
+export default function Toolkit() {
+  return (
+    <section className="border-t border-white/5 py-24">
+      <Container className="grid gap-10 md:grid-cols-4">
+        <div className="flex flex-col gap-6">
+          <ColumnHeading>What I Use</ColumnHeading>
+          <ul className="flex flex-col gap-3">
+            {TOOLS.map((tool, index) => (
+              <li
+                key={tool}
+                className={`font-sans text-sm text-text-primary/80 ${
+                  index === TOOLS.length - 1 ? "italic opacity-50 text-xs" : ""
+                }`}
+              >
+                {index === TOOLS.length - 1 ? `Earlier: ${tool}` : tool}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="flex flex-col gap-6">
+          <ColumnHeading>Expertise</ColumnHeading>
+          <ul className="flex flex-col gap-3">
+            {EXPERTISE.map((item) => (
+              <li key={item} className="font-sans text-sm text-text-primary/80">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="flex flex-col gap-6">
+          <ColumnHeading>Languages</ColumnHeading>
+          <ul className="flex flex-col gap-3">
+            {LANGUAGES.map((lang) => (
+              <li key={lang.name} className="flex justify-between gap-4">
+                <span className="font-sans text-sm text-text-primary/80">
+                  {lang.name}
+                </span>
+                <span className="font-sans text-[10px] text-text-muted">
+                  {lang.level}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <ColumnHeading>Education</ColumnHeading>
+          <div className="pt-6">
+            <p className="font-sans text-sm font-bold text-text-primary">
+              Bachelor&apos;s Degree, Design
+            </p>
+            <p className="mt-3 font-sans text-xs text-text-muted">
+              Academy of Design
+            </p>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}

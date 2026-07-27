@@ -294,13 +294,13 @@ export default function PlayerProfileCaseStudy() {
           <div className="grid gap-8 md:grid-cols-3">
             {gallery.map((item, index) => (
               <Reveal key={item.label} delay={index * 60} className="flex flex-col gap-3">
-                <div className="relative h-[240px] w-full overflow-hidden rounded-lg border border-white/10 bg-surface">
+                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg border border-white/10 bg-surface">
                   <Image
                     src={item.image}
                     alt={`${item.label} — ${item.caption}`}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover object-top"
+                    className="object-contain"
                   />
                 </div>
                 <p className="font-sans text-sm text-text-muted">

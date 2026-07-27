@@ -37,8 +37,9 @@ export default function PortfolioOverview() {
                 alt="Player Profile dashboard — account overview with financial activity chart"
                 fill
                 sizes="(max-width: 768px) 100vw, 672px"
-                className="object-cover"
+                className="object-cover object-top brightness-90"
               />
+              <div className="absolute inset-0 bg-bg/15" />
             </div>
           </Reveal>
 

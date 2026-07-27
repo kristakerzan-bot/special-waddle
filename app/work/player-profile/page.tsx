@@ -294,7 +294,7 @@ export default function PlayerProfileCaseStudy() {
           <div className="grid gap-8 md:grid-cols-3">
             {gallery.map((item, index) => (
               <Reveal key={item.label} delay={index * 60} className="flex flex-col gap-3">
-                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg border border-white/10 bg-surface">
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-white/10 bg-surface">
                   <Image
                     src={item.image}
                     alt={`${item.label} — ${item.caption}`}

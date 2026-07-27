@@ -7,11 +7,6 @@ export type Project = {
   gallery: string[];
 };
 
-const playerProfileGallery = Array.from(
-  { length: 13 },
-  (_, i) => `/images/projects/player-profile-${i + 1}.png`,
-);
-
 export const projects: Project[] = [
   {
     slug: "player-profile",
@@ -19,8 +14,8 @@ export const projects: Project[] = [
     title: "Player Profile",
     summary:
       "Optimized administrative tools built to handle massive complex user profiles while seamlessly ensuring jurisdiction-level legal compliance and guardrails.",
-    coverImage: "/images/projects/player-profile-3.png",
-    gallery: playerProfileGallery,
+    coverImage: "/images/projects/player-profile-01-overview.png",
+    gallery: ["/images/projects/player-profile-01-overview.png"],
   },
   {
     slug: "payments",

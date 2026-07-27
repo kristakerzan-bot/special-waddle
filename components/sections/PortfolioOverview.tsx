@@ -31,9 +31,9 @@ export default function PortfolioOverview() {
         {/* Case for Process */}
         <div className="flex flex-col gap-10">
           <Reveal className="relative w-full max-w-2xl overflow-hidden rounded-2xl border border-white/10 bg-surface p-2 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] transition-transform duration-500 hover:-translate-y-1">
-            <div className="relative aspect-[683/367] w-full overflow-hidden rounded-xl">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
               <Image
-                src="/images/projects/player-profile-3.png"
+                src="/images/projects/player-profile-01-overview.png"
                 alt="Player Profile dashboard — account overview with financial activity chart"
                 fill
                 sizes="(max-width: 768px) 100vw, 672px"

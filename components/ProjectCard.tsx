@@ -17,11 +17,6 @@ export default function ProjectCard({ project }: { project: Project }) {
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-bg/70" />
-        <div className="absolute left-4 top-4 flex gap-[6px]">
-          <span className="size-2 rounded-full bg-red-500/40" />
-          <span className="size-2 rounded-full bg-yellow-500/40" />
-          <span className="size-2 rounded-full bg-green-500/40" />
-        </div>
       </div>
 
       <div className="flex flex-col gap-4 p-6">

@@ -6,13 +6,14 @@ import MetaLabel from "@/components/primitives/MetaLabel";
 import NumberedList from "@/components/primitives/NumberedList";
 import PullQuote from "@/components/primitives/PullQuote";
 import ProjectCard from "@/components/ProjectCard";
+import Reveal from "@/components/primitives/Reveal";
 import { projects } from "@/lib/projects";
 
 export default function PortfolioOverview() {
   return (
     <section id="offer" className="py-24 md:py-32">
       <Container className="flex flex-col gap-20">
-        <div className="flex flex-col gap-6">
+        <Reveal className="flex flex-col gap-6">
           <div className="flex items-center gap-3">
             <Eyebrow>Applied UX Artifacts</Eyebrow>
             <MetaLabel>Methodology: Case for Process vs. Judgment</MetaLabel>
@@ -25,11 +26,11 @@ export default function PortfolioOverview() {
             <br />
             {"// Here is how I decide between full discovery and rapid iteration."}
           </p>
-        </div>
+        </Reveal>
 
         {/* Case for Process */}
         <div className="flex flex-col gap-10">
-          <div className="relative w-full max-w-2xl overflow-hidden rounded-2xl border border-white/10 bg-surface p-2 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)]">
+          <Reveal className="relative w-full max-w-2xl overflow-hidden rounded-2xl border border-white/10 bg-surface p-2 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] transition-transform duration-500 hover:-translate-y-1">
             <div className="relative aspect-[683/367] w-full overflow-hidden rounded-xl">
               <Image
                 src="/images/projects/player-profile-3.png"
@@ -38,9 +39,9 @@ export default function PortfolioOverview() {
                 className="object-cover"
               />
             </div>
-          </div>
+          </Reveal>
 
-          <div className="flex flex-col gap-6">
+          <Reveal delay={100} className="flex flex-col gap-6">
             <p className="font-mono text-[11px] uppercase tracking-[0.1em] text-accent-light">
               Enterprise Backoffice // High Stake Flow
             </p>
@@ -61,12 +62,12 @@ export default function PortfolioOverview() {
             <PullQuote>
               The win was the shift in team confidence, not just the metric.
             </PullQuote>
-          </div>
+          </Reveal>
         </div>
 
         {/* Case for Judgment */}
         <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
-          <div className="flex flex-col gap-6 lg:col-span-5">
+          <Reveal className="flex flex-col gap-6 lg:col-span-5">
             <p className="font-mono text-[11px] uppercase tracking-[0.1em] text-accent-light">
               Promotions Engine // Speed To Market
             </p>
@@ -87,10 +88,10 @@ export default function PortfolioOverview() {
             <PullQuote>
               The user reaction justified the pattern, not the slide deck.
             </PullQuote>
-          </div>
+          </Reveal>
 
-          <div className="lg:col-span-7">
-            <div className="rounded-2xl border border-white/10 bg-surface p-8">
+          <Reveal delay={150} className="lg:col-span-7">
+            <div className="rounded-2xl border border-white/10 bg-surface p-8 transition-transform duration-500 hover:-translate-y-1">
               <div className="mb-8 flex items-center justify-between">
                 <div className="flex gap-[6px]">
                   <span className="size-[6px] rounded-full bg-white/20" />
@@ -103,11 +104,12 @@ export default function PortfolioOverview() {
                 {["01", "02", "03", "04"].map((step, index) => (
                   <div key={step} className="flex flex-1 items-center">
                     <div
-                      className={`flex size-8 items-center justify-center rounded-full border font-mono text-[10px] ${
+                      className={`flex size-8 items-center justify-center rounded-full border font-mono text-[10px] transition-colors duration-500 ${
                         index === 0
                           ? "border-accent bg-accent text-white"
                           : "border-white/10 text-text-muted"
                       }`}
+                      style={{ transitionDelay: `${300 + index * 150}ms` }}
                     >
                       {step}
                     </div>
@@ -118,12 +120,12 @@ export default function PortfolioOverview() {
                 ))}
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
 
         {/* Selected UX Artifacts */}
         <div className="flex flex-col gap-8">
-          <div className="flex flex-col gap-2">
+          <Reveal className="flex flex-col gap-2">
             <div className="flex items-center gap-2">
               <MetaLabel>02 / Case Studies</MetaLabel>
               <Divider />
@@ -131,10 +133,12 @@ export default function PortfolioOverview() {
             <p className="font-display text-3xl italic text-text-primary md:text-4xl">
               Selected UX Artifacts
             </p>
-          </div>
+          </Reveal>
           <div className="grid gap-8 md:grid-cols-3">
-            {projects.map((project) => (
-              <ProjectCard key={project.slug} project={project} />
+            {projects.map((project, index) => (
+              <Reveal key={project.slug} delay={index * 100} className="h-full">
+                <ProjectCard project={project} />
+              </Reveal>
             ))}
           </div>
         </div>

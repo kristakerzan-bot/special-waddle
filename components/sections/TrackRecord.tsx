@@ -1,6 +1,7 @@
 import Container from "@/components/primitives/Container";
 import Eyebrow from "@/components/primitives/Eyebrow";
 import MetaLabel from "@/components/primitives/MetaLabel";
+import Reveal from "@/components/primitives/Reveal";
 
 const ROLES = [
   {
@@ -30,7 +31,7 @@ export default function TrackRecord() {
   return (
     <section id="partnership" className="py-24 md:py-32">
       <Container className="grid gap-16 lg:grid-cols-12">
-        <div className="flex flex-col gap-6 lg:col-span-5">
+        <Reveal className="flex flex-col gap-6 lg:col-span-5">
           <div className="flex items-center gap-3">
             <Eyebrow>Trajectory</Eyebrow>
             <MetaLabel>{"// Experience History"}</MetaLabel>
@@ -64,11 +65,11 @@ export default function TrackRecord() {
               ))}
             </ul>
           </div>
-        </div>
+        </Reveal>
 
         <div className="flex flex-col gap-16 lg:col-span-7">
-          {ROLES.map((role) => (
-            <div key={role.title} className="relative pl-12">
+          {ROLES.map((role, index) => (
+            <Reveal key={role.title} delay={index * 120} className="relative pl-12">
               <div className="absolute left-0 top-0 h-full w-px bg-white/10" />
               <span
                 className={`absolute -left-[4.5px] top-0 size-[9px] rounded-full ${
@@ -99,7 +100,7 @@ export default function TrackRecord() {
                   {role.body}
                 </p>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </Container>

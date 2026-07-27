@@ -3,6 +3,7 @@ import Container from "@/components/primitives/Container";
 import Divider from "@/components/primitives/Divider";
 import Eyebrow from "@/components/primitives/Eyebrow";
 import MetaLabel from "@/components/primitives/MetaLabel";
+import Reveal from "@/components/primitives/Reveal";
 
 export default function Hero() {
   return (
@@ -15,7 +16,7 @@ export default function Hero() {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(79,70,229,0.12),transparent_60%)]"
       />
       <Container className="relative grid gap-16 lg:grid-cols-12 lg:items-center">
-        <div className="flex flex-col gap-8 lg:col-span-7">
+        <Reveal className="flex flex-col gap-8 lg:col-span-7">
           <div className="flex items-center gap-3">
             <Eyebrow>Contextual Phase</Eyebrow>
             <Divider />
@@ -46,10 +47,10 @@ export default function Hero() {
             Analyze the discovery gap
             <Divider width="w-12" className="transition-all group-hover:w-16" />
           </a>
-        </div>
+        </Reveal>
 
-        <div className="lg:col-span-5">
-          <div className="relative w-full max-w-[448px] overflow-hidden rounded-2xl border border-white/10 bg-surface p-[17px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)]">
+        <Reveal delay={150} className="lg:col-span-5">
+          <div className="relative w-full max-w-[448px] overflow-hidden rounded-2xl border border-white/10 bg-surface p-[17px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] transition-transform duration-500 hover:-translate-y-1">
             <div className="flex flex-col gap-4">
               <div className="flex items-center justify-between px-2">
                 <div className="flex gap-[6px]">
@@ -87,7 +88,7 @@ export default function Hero() {
               </div>
             </div>
           </div>
-        </div>
+        </Reveal>
       </Container>
     </section>
   );

@@ -76,7 +76,7 @@ export default function Hero() {
                     alt="Krista, UX/Product Design Lead"
                     fill
                     sizes="(max-width: 768px) 100vw, 448px"
-                    className="scale-110 object-cover brightness-50"
+                    className="object-cover object-bottom brightness-50"
                   />
                   <div className="absolute inset-0 bg-bg/35" />
                   <span className="absolute right-4 top-4 -rotate-2 rounded bg-accent px-2 py-1 font-mono text-[8px] text-white">

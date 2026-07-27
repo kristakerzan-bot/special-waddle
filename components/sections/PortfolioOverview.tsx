@@ -84,7 +84,7 @@ export default function PortfolioOverview() {
             <NumberedList
               items={[
                 "Applied proven stepper patterns to resolve immediate conversion friction.",
-                "Skipped full research cycle for speed, validated through rapid prototyping.",
+                "Skipped full research cycle for speed, validated through rapid prototyping and AI-assisted cross-validation.",
               ]}
             />
             <PullQuote>

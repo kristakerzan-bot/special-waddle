@@ -28,7 +28,7 @@ export const projects: Project[] = [
   },
   {
     slug: "rules",
-    category: "Risk & Compliance // Rule Engine Architecture",
+    category: "Risk & Compliance // Rule Engine",
     title: "Rules",
     summary:
       "Turned a code-only fraud and compliance tool into something two different teams can both use, each in the way they already think: writing logic by hand, or building it visually.",

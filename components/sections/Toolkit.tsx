@@ -23,7 +23,7 @@ const LANGUAGES = [
   { name: "Slovenian", level: "Native" },
   { name: "English", level: "Fluent" },
   { name: "Croatian", level: "Fluent" },
-  { name: "Italian", level: "Conversational" },
+  { name: "Italian", level: "Basic Conversational" },
   { name: "Spanish", level: "Basic" },
 ];
 

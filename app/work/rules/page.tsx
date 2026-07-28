@@ -74,7 +74,7 @@ export default function RulesCaseStudy() {
           </div>
 
           <p className="font-mono text-[13px] uppercase tracking-[0.1em] text-text-muted">
-            Role: {hero.role}
+            Role: {hero.role} · Status: {hero.status}
           </p>
         </Reveal>
       </section>
@@ -86,7 +86,7 @@ export default function RulesCaseStudy() {
             <MetaLabel>Methodology</MetaLabel>
             <div className="h-px w-8 bg-accent-light/30" />
             <MetaLabel>
-              {"// Legacy audit, dual-audience reframing, pattern borrowing, parallel-mode prototyping"}
+              {"// Reviewing the old tool, spotting two kinds of users, borrowing what works, building both modes together"}
             </MetaLabel>
           </div>
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
@@ -110,7 +110,7 @@ export default function RulesCaseStudy() {
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3">
               <Eyebrow>Cohort Profile</Eyebrow>
-              <MetaLabel>{"// Who uses this"}</MetaLabel>
+              <MetaLabel>{"// Three roles, one engine"}</MetaLabel>
             </div>
             <h2 className="font-display text-[36px] italic text-text-primary md:text-[56px]">
               Who uses this
@@ -135,11 +135,11 @@ export default function RulesCaseStudy() {
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3">
               <Eyebrow>What The Legacy Tool Got Wrong</Eyebrow>
-              <MetaLabel>{"// Heuristic read of the old Rules screens"}</MetaLabel>
+              <MetaLabel>{"// 6 issues found"}</MetaLabel>
             </div>
             <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
               <h2 className="font-display text-[36px] italic text-text-primary md:text-[56px]">
-                A heuristic read of the old Rules screens
+                Where the old tool ran out of road
               </h2>
               <div className="flex flex-wrap gap-4">
                 {severityCounts.map((item) => (

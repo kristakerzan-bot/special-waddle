@@ -4,35 +4,36 @@ export const hero = {
   badge: "Risk & Compliance · Rule Engine Architecture",
   title: "Rules: One Engine, Three Teams Who Don't Think Alike",
   subtext:
-    "Redesigned a legacy code-only fraud and compliance rule engine into a dual-mode builder, serving technical and non-technical BackOffice teams without forcing either into the other's workflow. The central bet: this is a two-audience problem, not a one-audience problem with a learning curve.",
+    "A fraud and compliance rule engine that used to be code-only. Now it works two ways, so a risk analyst can write logic by hand and a compliance manager can build the same rule visually, without either one waiting on the other. The problem was never that people needed training: it's that two different kinds of people were being asked to use the tool the exact same way.",
   stats: [
     { value: "2", label: "Editor Modes (Code + Visual)" },
     { value: "8", label: "Trigger Events Covered" },
     { value: "8", label: "Attribute Categories (Fraud, Bonus, Compliance)" },
     { value: "11", label: "Action Types (Block / Account / Notify)" },
   ],
-  role: "Sole UX Designer · Shipped",
+  role: "Sole UX Designer",
+  status: "Shipped",
 };
 
 export const methods = [
   {
     index: "01",
-    title: "Legacy System Audit",
+    title: "Reviewing The Old Tool",
     body: "Reviewed the existing Rules tool across Fraud, IP, Game, Country, and Serial restriction tabs. A single free-text condition block per rule, written in a Drools-style expression language.",
   },
   {
     index: "02",
-    title: "Dual-Audience Reframing",
+    title: "Spotting Two Different Users",
     body: "Identified that rule authorship splits along technical comfort: risk/fraud analysts who think in expressions, and compliance/bonus-ops staff who think in conditions and outcomes.",
   },
   {
     index: "03",
-    title: "Pattern Borrowing",
-    body: "Adapted modern rule-builder patterns (visual condition trees, live plain-language previews, categorized attribute pickers) to both editor modes without stripping expressiveness.",
+    title: "Borrowing What Already Works",
+    body: "Looked at how modern rule builders solve this (visual condition trees, plain-language previews, organized attribute lists) and brought the good parts into both editor modes, without losing any power for people who prefer code.",
   },
   {
     index: "04",
-    title: "Parallel-Mode Prototyping",
+    title: "Building Both Modes Together",
     body: "Designed the code editor and visual builder side by side so neither reads as the \"real\" tool with the other bolted on. Same attributes, same actions, same live preview.",
   },
 ];
@@ -96,7 +97,7 @@ export const severityCounts = [
 
 export const findings: Finding[] = [
   {
-    name: "Single Paradigm Forced On Everyone",
+    name: "One Way of Working, Forced on Everyone",
     severity: "critical",
     body: "Conditions were a raw Drools-style expression, full stop. No non-code path. Every change required writing executable-looking rule syntax.",
   },
@@ -106,12 +107,12 @@ export const findings: Finding[] = [
     body: "Versioning was a confirm dialog, not a record. No diff, no author attribution, no field for why the change was made.",
   },
   {
-    name: "No Plain-Language Readback",
+    name: "Nothing Translated the Logic Into Plain English",
     severity: "high",
     body: "Nothing translated the expression back into a sentence a reviewer could sanity-check. Re-reading raw syntax every time, for every reviewer.",
   },
   {
-    name: "Fact Reference Disconnected From Authoring",
+    name: "You Couldn't Pull a Field Into Your Rule Without Retyping It",
     severity: "high",
     body: "The fact-tree browser was look-only, not click-to-insert. Field names had to be manually retyped with no autocomplete.",
   },

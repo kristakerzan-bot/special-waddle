@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import Eyebrow from "@/components/primitives/Eyebrow";
 import MetaLabel from "@/components/primitives/MetaLabel";
 import Reveal from "@/components/primitives/Reveal";
 import ScenarioCard from "@/components/casestudy/ScenarioCard";
 import FindingCard from "@/components/casestudy/FindingCard";
+import ScreenshotGallery from "@/components/casestudy/ScreenshotGallery";
 import {
   hero,
   methods,
@@ -212,35 +212,7 @@ export default function PaymentsCaseStudy() {
               The redesigned payment flows
             </h2>
           </div>
-          <div className="grid gap-8 md:grid-cols-3">
-            {gallery.map((item, index) => (
-              <Reveal key={item.label} delay={index * 60} className="flex flex-col gap-3">
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-white/10 bg-surface">
-                  {item.image ? (
-                    <Image
-                      src={item.image}
-                      alt={`${item.label} — ${item.caption}`}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      className="object-cover object-top"
-                    />
-                  ) : (
-                    <div className="flex h-full w-full items-center justify-center border border-dashed border-white/10">
-                      <p className="font-sans text-sm text-text-muted">
-                        ↑ Screenshot coming soon
-                      </p>
-                    </div>
-                  )}
-                </div>
-                <p className="font-sans text-sm font-bold text-text-primary">
-                  {item.label}
-                </p>
-                <p className="font-sans text-sm text-text-muted">
-                  {item.caption}
-                </p>
-              </Reveal>
-            ))}
-          </div>
+          <ScreenshotGallery gallery={gallery} />
         </Reveal>
       </section>
 

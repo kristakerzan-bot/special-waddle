@@ -190,9 +190,4 @@ export const gallery: {
     caption: "Paid-out totals, monthly volume, and average payment size across the ledger.",
     image: "/images/projects/payments-08-payments-tab.png",
   },
-  {
-    label: "Failed Payment",
-    caption: "A frozen-account withdrawal halted at compliance check, with the block reason surfaced.",
-    image: "/images/projects/payments-09-payments-detail-failed.png",
-  },
 ];

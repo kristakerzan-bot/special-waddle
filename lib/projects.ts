@@ -31,9 +31,9 @@ export const projects: Project[] = [
     category: "Risk & Compliance // Rule Engine Architecture",
     title: "Rules",
     summary:
-      "Rebuilt a legacy code-only fraud and compliance rule engine into a dual-mode builder, letting technical and non-technical teams write the same logic in the way each one thinks.",
-    coverImage: "/images/projects/rules.svg",
-    gallery: ["/images/projects/rules.svg"],
+      "Turned a code-only fraud and compliance tool into something two different teams can both use, each in the way they already think: writing logic by hand, or building it visually.",
+    coverImage: "/images/projects/rules-01-library.png",
+    gallery: ["/images/projects/rules-01-library.png"],
   },
 ];
 

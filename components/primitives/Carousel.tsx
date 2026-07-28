@@ -35,9 +35,9 @@ export default function Carousel({
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      <div className="flex items-center justify-between">
+      <div className="flex items-center">
         {slides.map((slide, index) => (
-          <div key={slide.image} className="flex flex-1 items-center">
+          <div key={slide.image} className="contents">
             <div
               className={`flex size-8 shrink-0 items-center justify-center rounded-full border font-mono text-[10px] transition-colors duration-300 ${
                 index === active
@@ -67,7 +67,7 @@ export default function Carousel({
                 fill
                 sizes="(max-width: 768px) 100vw, 560px"
                 priority={index === 0}
-                className="object-contain"
+                className="object-cover object-top"
               />
             </div>
           ))}

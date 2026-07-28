@@ -172,7 +172,7 @@ export const gallery: {
   {
     label: "Rules Library",
     caption: "Filterable list of all configured rules.",
-    image: null,
+    image: "/images/projects/rules-01-library.png",
   },
   {
     label: "New Rule: Step 1",
@@ -182,12 +182,12 @@ export const gallery: {
   {
     label: "Visual Builder",
     caption: "Conditions & Actions",
-    image: null,
+    image: "/images/projects/rules-02-visual-builder-conditions.png",
   },
   {
     label: "Code Editor",
     caption: "Attribute-Aware",
-    image: null,
+    image: "/images/projects/rules-03-code-editor-attributes.png",
   },
   {
     label: "Code Editor",
@@ -197,6 +197,6 @@ export const gallery: {
   {
     label: "Rule Detail",
     caption: "& Version History",
-    image: null,
+    image: "/images/projects/rules-04-rule-detail-version-history.png",
   },
 ];

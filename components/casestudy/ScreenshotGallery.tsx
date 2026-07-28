@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import Reveal from "@/components/primitives/Reveal";
 
@@ -67,45 +68,47 @@ export default function ScreenshotGallery({
         ))}
       </div>
 
-      {active?.image && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-6 backdrop-blur-sm"
-          onClick={() => setActiveIndex(null)}
-        >
-          <button
-            type="button"
-            onClick={() => setActiveIndex(null)}
-            aria-label="Close"
-            className="absolute right-6 top-6 flex size-10 items-center justify-center rounded-full bg-white/10 text-text-primary transition-colors hover:bg-white/20"
-          >
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <path
-                d="M1 1L13 13M13 1L1 13"
-                stroke="currentColor"
-                strokeWidth="1.4"
-                strokeLinecap="round"
-              />
-            </svg>
-          </button>
+      {active?.image &&
+        createPortal(
           <div
-            className="relative w-full max-w-4xl"
-            onClick={(e) => e.stopPropagation()}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 p-6 backdrop-blur-sm"
+            onClick={() => setActiveIndex(null)}
           >
-            <div className={`relative ${aspectClassName} w-full overflow-hidden rounded-lg border border-white/10 bg-surface`}>
-              <Image
-                src={active.image}
-                alt={`${active.label} — ${active.caption}`}
-                fill
-                sizes="90vw"
-                className="object-contain"
-              />
+            <button
+              type="button"
+              onClick={() => setActiveIndex(null)}
+              aria-label="Close"
+              className="absolute right-6 top-6 flex size-10 items-center justify-center rounded-full bg-white/10 text-text-primary transition-colors hover:bg-white/20"
+            >
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path
+                  d="M1 1L13 13M13 1L1 13"
+                  stroke="currentColor"
+                  strokeWidth="1.4"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </button>
+            <div
+              className="relative w-full max-w-4xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className={`relative ${aspectClassName} w-full overflow-hidden rounded-lg border border-white/10 bg-surface`}>
+                <Image
+                  src={active.image}
+                  alt={`${active.label} — ${active.caption}`}
+                  fill
+                  sizes="90vw"
+                  className="object-contain"
+                />
+              </div>
+              <p className="mt-4 text-center font-sans text-sm text-text-muted">
+                {active.label} — {active.caption}
+              </p>
             </div>
-            <p className="mt-4 text-center font-sans text-sm text-text-muted">
-              {active.label} — {active.caption}
-            </p>
-          </div>
-        </div>
-      )}
+          </div>,
+          document.body,
+        )}
     </>
   );
 }

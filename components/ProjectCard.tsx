@@ -14,7 +14,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           alt=""
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-bg/70" />
       </div>

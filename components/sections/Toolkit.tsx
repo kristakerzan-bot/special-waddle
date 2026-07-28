@@ -92,24 +92,6 @@ export default function Toolkit() {
               Academy of Design
             </p>
           </div>
-
-          <div className="pt-10">
-            <ColumnHeading>Contact</ColumnHeading>
-            <a
-              href="mailto:kristina.kerzan@gmail.com"
-              className="mt-3 block font-sans text-sm text-text-primary/80 transition-colors hover:text-text-primary"
-            >
-              kristina.kerzan@gmail.com
-            </a>
-            <a
-              href="https://www.linkedin.com/in/krista-kerzan/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 block font-sans text-sm text-text-primary/80 transition-colors hover:text-text-primary"
-            >
-              LinkedIn
-            </a>
-          </div>
         </Reveal>
       </Container>
     </section>

@@ -83,7 +83,7 @@ export default function PortfolioOverview() {
             </p>
             <NumberedList
               items={[
-                "Applied proven stepper patterns to resolve immediate conversion friction.",
+                "Redesigned a complex flow using established stepper patterns, making it easier for users to complete the process.",
                 "Skipped full research cycle for speed, validated through rapid prototyping and AI-assisted cross-validation.",
               ]}
             />

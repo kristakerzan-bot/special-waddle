@@ -7,7 +7,23 @@ import NumberedList from "@/components/primitives/NumberedList";
 import PullQuote from "@/components/primitives/PullQuote";
 import ProjectCard from "@/components/ProjectCard";
 import Reveal from "@/components/primitives/Reveal";
+import Carousel from "@/components/primitives/Carousel";
 import { projects } from "@/lib/projects";
+
+const PROTOTYPE_SLIDES = [
+  {
+    image: "/images/projects/loyalty-01-new-contribution-step-1.png",
+    label: "Contribution Info",
+  },
+  {
+    image: "/images/projects/loyalty-03-contribution-logic.png",
+    label: "Contribution Logic",
+  },
+  {
+    image: "/images/projects/loyalty-04-display.png",
+    label: "Display",
+  },
+];
 
 export default function PortfolioOverview() {
   return (
@@ -94,65 +110,13 @@ export default function PortfolioOverview() {
 
           <Reveal delay={150} className="lg:col-span-7">
             <div className="rounded-2xl border border-white/10 bg-surface p-8 transition-transform duration-500 hover:-translate-y-1">
-              <div className="mb-8 flex items-center justify-between">
-                <div className="flex gap-[6px]">
-                  <span className="size-[6px] rounded-full bg-white/20" />
-                  <span className="size-[6px] rounded-full bg-white/20" />
-                  <span className="size-[6px] rounded-full bg-accent" />
-                </div>
-                <MetaLabel>Rapid Prototyping Stepper</MetaLabel>
+              <div className="mb-6 flex items-center justify-between">
+                <MetaLabel>Rapid Prototyping Gallery</MetaLabel>
+                <span className="font-mono text-[9px] uppercase tracking-[0.1em] text-text-muted">
+                  Loyalty Contributions
+                </span>
               </div>
-              <div className="flex items-center justify-between">
-                {["01", "02", "03"].map((step, index) => (
-                  <div key={step} className="flex flex-1 items-center">
-                    <div
-                      className={`flex size-8 items-center justify-center rounded-full border font-mono text-[10px] transition-colors duration-500 ${
-                        index === 0
-                          ? "border-accent bg-accent text-white"
-                          : "border-white/10 text-text-muted"
-                      }`}
-                      style={{ transitionDelay: `${300 + index * 150}ms` }}
-                    >
-                      {step}
-                    </div>
-                    {index < 2 && (
-                      <div className="mx-2 h-px flex-1 bg-white/10" />
-                    )}
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-8 grid grid-cols-3 gap-4">
-                {[
-                  {
-                    label: "Contribution Info",
-                    image: "/images/projects/loyalty-01-new-contribution-step-1.png",
-                  },
-                  {
-                    label: "Contribution Logic",
-                    image: "/images/projects/loyalty-03-contribution-logic.png",
-                  },
-                  {
-                    label: "Display",
-                    image: "/images/projects/loyalty-04-display.png",
-                  },
-                ].map((step) => (
-                  <div key={step.label} className="flex flex-col gap-2">
-                    <div className="relative aspect-[3/2] w-full overflow-hidden rounded-lg border border-white/10 bg-bg/40">
-                      <Image
-                        src={step.image}
-                        alt={`${step.label} — loyalty contribution wizard`}
-                        fill
-                        sizes="(max-width: 768px) 33vw, 220px"
-                        className="object-cover object-top"
-                      />
-                    </div>
-                    <p className="text-center font-mono text-[9px] uppercase tracking-[0.1em] text-text-muted">
-                      {step.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
+              <Carousel slides={PROTOTYPE_SLIDES} />
             </div>
           </Reveal>
         </div>

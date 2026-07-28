@@ -121,6 +121,21 @@ export default function PortfolioOverview() {
                   </div>
                 ))}
               </div>
+
+              <div className="mt-8 grid grid-cols-3 gap-4">
+                {["Step 1", "Step 2", "Step 3"].map((label) => (
+                  <div key={label} className="flex flex-col gap-2">
+                    <div className="flex aspect-[4/3] w-full items-center justify-center rounded-lg border border-dashed border-white/15 bg-bg/40">
+                      <p className="px-2 text-center font-sans text-xs text-text-muted">
+                        ↑ Drop screenshot here
+                      </p>
+                    </div>
+                    <p className="text-center font-mono text-[9px] uppercase tracking-[0.1em] text-text-muted">
+                      {label}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </Reveal>
         </div>

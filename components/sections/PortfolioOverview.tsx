@@ -143,6 +143,11 @@ export default function PortfolioOverview() {
               </Reveal>
             ))}
           </div>
+          <Reveal delay={projects.length * 100} className="text-center">
+            <p className="font-mono text-xs uppercase tracking-[0.15em] text-text-muted">
+              More case studies coming soon
+            </p>
+          </Reveal>
         </div>
       </Container>
     </section>

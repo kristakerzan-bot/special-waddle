@@ -21,6 +21,11 @@ export default function ScreenshotGallery({
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const active = activeIndex !== null ? gallery[activeIndex] : null;
 
+  const ratioMatch = aspectClassName.match(/(\d+)\/(\d+)/);
+  const [ratioW, ratioH] = ratioMatch
+    ? [Number(ratioMatch[1]), Number(ratioMatch[2])]
+    : [4, 3];
+
   useEffect(() => {
     if (!active) return;
     const onKey = (e: KeyboardEvent) => {
@@ -71,14 +76,14 @@ export default function ScreenshotGallery({
       {active?.image &&
         createPortal(
           <div
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 p-6 backdrop-blur-sm"
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 p-3 backdrop-blur-sm sm:p-6"
             onClick={() => setActiveIndex(null)}
           >
             <button
               type="button"
               onClick={() => setActiveIndex(null)}
               aria-label="Close"
-              className="absolute right-6 top-6 flex size-10 items-center justify-center rounded-full bg-white/10 text-text-primary transition-colors hover:bg-white/20"
+              className="absolute right-4 top-4 flex size-10 items-center justify-center rounded-full bg-white/10 text-text-primary transition-colors hover:bg-white/20 sm:right-6 sm:top-6"
             >
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path
@@ -90,19 +95,25 @@ export default function ScreenshotGallery({
               </svg>
             </button>
             <div
-              className="relative w-full max-w-4xl"
+              className="flex flex-col items-center gap-4"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className={`relative ${aspectClassName} w-full overflow-hidden rounded-lg border border-white/10 bg-surface`}>
+              <div
+                className="relative overflow-hidden rounded-lg border border-white/10 bg-surface"
+                style={{
+                  aspectRatio: `${ratioW} / ${ratioH}`,
+                  width: `min(94vw, calc(78vh * ${ratioW} / ${ratioH}))`,
+                }}
+              >
                 <Image
                   src={active.image}
                   alt={`${active.label} — ${active.caption}`}
                   fill
-                  sizes="90vw"
+                  sizes="94vw"
                   className="object-contain"
                 />
               </div>
-              <p className="mt-4 text-center font-sans text-sm text-text-muted">
+              <p className="text-center font-sans text-sm text-text-muted">
                 {active.label} — {active.caption}
               </p>
             </div>

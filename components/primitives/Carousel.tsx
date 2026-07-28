@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Slide = {
   image: string;
@@ -18,13 +18,34 @@ export default function Carousel({
 }) {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [skipTransition, setSkipTransition] = useState(false);
+  const activeRef = useRef(active);
+  useEffect(() => {
+    activeRef.current = active;
+  }, [active]);
+
+  // Wrapping last->first (or first->last) would otherwise animate backward
+  // through every slide; jump instantly for just that one transition instead.
+  const goTo = (next: number, direction: 1 | -1) => {
+    const wrapped =
+      (direction === 1 && next < activeRef.current) ||
+      (direction === -1 && next > activeRef.current);
+    if (wrapped) setSkipTransition(true);
+    setActive(next);
+  };
+
+  useEffect(() => {
+    if (!skipTransition) return;
+    const raf = requestAnimationFrame(() => setSkipTransition(false));
+    return () => cancelAnimationFrame(raf);
+  }, [skipTransition]);
 
   useEffect(() => {
     if (paused) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     const id = setInterval(() => {
-      setActive((prev) => (prev + 1) % slides.length);
+      goTo((activeRef.current + 1) % slides.length, 1);
     }, interval);
     return () => clearInterval(id);
   }, [paused, interval, slides.length]);
@@ -56,7 +77,7 @@ export default function Carousel({
 
       <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl border border-white/10 bg-bg/40">
         <div
-          className="flex h-full w-full transition-transform duration-700 ease-in-out"
+          className={`flex h-full w-full ${skipTransition ? "" : "transition-transform duration-700 ease-in-out"}`}
           style={{ transform: `translateX(-${active * 100}%)` }}
         >
           {slides.map((slide, index) => (
@@ -76,7 +97,7 @@ export default function Carousel({
         <button
           type="button"
           onClick={() =>
-            setActive((prev) => (prev - 1 + slides.length) % slides.length)
+            goTo((active - 1 + slides.length) % slides.length, -1)
           }
           aria-label="Previous design"
           className="absolute left-3 top-1/2 flex size-8 -translate-y-1/2 items-center justify-center rounded-full bg-bg/60 text-text-primary backdrop-blur transition-colors hover:bg-bg/80"
@@ -93,7 +114,7 @@ export default function Carousel({
         </button>
         <button
           type="button"
-          onClick={() => setActive((prev) => (prev + 1) % slides.length)}
+          onClick={() => goTo((active + 1) % slides.length, 1)}
           aria-label="Next design"
           className="absolute right-3 top-1/2 flex size-8 -translate-y-1/2 items-center justify-center rounded-full bg-bg/60 text-text-primary backdrop-blur transition-colors hover:bg-bg/80"
         >

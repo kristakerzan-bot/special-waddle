@@ -48,7 +48,6 @@ export default function RulesCaseStudy() {
       <section className="px-6 py-24 md:px-32">
         <Reveal className="flex flex-col gap-16">
           <div className="flex flex-col gap-6">
-            <Eyebrow>{hero.badge}</Eyebrow>
             <h1 className="max-w-4xl font-display text-[40px] italic leading-[1.1] tracking-[-0.02em] text-text-primary md:text-[64px]">
               {hero.title}
             </h1>

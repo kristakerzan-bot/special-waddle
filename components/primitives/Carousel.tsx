@@ -48,7 +48,7 @@ export default function Carousel({
                 fill
                 sizes="(max-width: 768px) 100vw, 560px"
                 priority={index === 0}
-                className="object-contain"
+                className="object-cover object-top"
               />
             </div>
           ))}

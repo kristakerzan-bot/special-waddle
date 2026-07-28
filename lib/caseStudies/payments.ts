@@ -146,16 +146,6 @@ export const gallery: {
   image: string | null;
 }[] = [
   {
-    label: "Payments Overview",
-    caption: "Paid-out totals, monthly volume, and average payment size across the ledger.",
-    image: "/images/projects/payments-08-payments-tab.png",
-  },
-  {
-    label: "Failed Payment",
-    caption: "A frozen-account withdrawal halted at compliance check, with the block reason surfaced.",
-    image: "/images/projects/payments-09-payments-detail-failed.png",
-  },
-  {
     label: "Withdrawals Queue",
     caption: "Pending, completed, and failed withdrawals with approve, decline, and hold actions.",
     image: "/images/projects/payments-03-withdrawals-list.png",
@@ -194,5 +184,15 @@ export const gallery: {
     label: "Withdrawal Lifecycle",
     caption: "Payment lifecycle steps shown inline over the transaction list.",
     image: "/images/projects/payments-01-transactions-detail.png",
+  },
+  {
+    label: "Payments Overview",
+    caption: "Paid-out totals, monthly volume, and average payment size across the ledger.",
+    image: "/images/projects/payments-08-payments-tab.png",
+  },
+  {
+    label: "Failed Payment",
+    caption: "A frozen-account withdrawal halted at compliance check, with the block reason surfaced.",
+    image: "/images/projects/payments-09-payments-detail-failed.png",
   },
 ];

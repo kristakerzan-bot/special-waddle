@@ -57,7 +57,7 @@ export default function PortfolioOverview() {
             </p>
             <NumberedList
               items={[
-                "Mapped the decision architecture to build guardrails into the interaction design.",
+                "Designed interaction patterns that guide users through complex decisions while preventing common mistakes.",
                 "Tested prototypes against real regulatory edge cases with support leads.",
               ]}
             />

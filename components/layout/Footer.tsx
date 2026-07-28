@@ -15,7 +15,7 @@ export default function Footer() {
             href="mailto:kristina.kerzan@gmail.com"
             className="font-sans text-[13px] text-text-muted transition-colors hover:text-text-primary"
           >
-            Email
+            Contact
           </a>
           <a
             href="https://www.linkedin.com/in/krista-kerzan/"

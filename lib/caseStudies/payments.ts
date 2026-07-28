@@ -22,8 +22,8 @@ export const methods = [
   },
   {
     index: "02",
-    title: "Heuristic Evaluation",
-    body: "Nielsen's 10 heuristics applied with severity scoring (0–4). Key violations found in payment creation and verification flows with compliance exposure.",
+    title: "Usability Review",
+    body: "Scored every screen against Nielsen's 10 usability principles, rating severity from 0 to 4. Found key issues in the payment creation and verification flows, several carrying real compliance risk.",
   },
   {
     index: "03",

@@ -32,7 +32,7 @@ export default function Contact() {
 
         <Reveal delay={300}>
           <a
-            href="mailto:hello@example.com"
+            href="mailto:kristina.kerzan@gmail.com"
             className="group mt-4 flex items-center gap-6 rounded-full border-2 border-white px-10 py-6 font-sans text-sm font-bold uppercase tracking-[0.2em] text-text-primary transition-all duration-300 hover:scale-105 hover:bg-white hover:text-bg"
           >
             Start the Resolution

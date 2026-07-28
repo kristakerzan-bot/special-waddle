@@ -23,8 +23,8 @@ export const projects: Project[] = [
     title: "Payments",
     summary:
       "Streamlined multicurrency ledger entries with bulletproof validation design, reducing transactional drop-off rates and visual backoffice noise.",
-    coverImage: "/images/projects/payments.svg",
-    gallery: ["/images/projects/payments.svg"],
+    coverImage: "/images/projects/payments-08-payments-tab.png",
+    gallery: ["/images/projects/payments-08-payments-tab.png"],
   },
   {
     slug: "integration-configuration",

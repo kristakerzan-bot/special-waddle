@@ -303,6 +303,9 @@ export default function PlayerProfileCaseStudy() {
                     className="object-cover object-top"
                   />
                 </div>
+                <p className="font-sans text-sm font-bold text-text-primary">
+                  {item.label}
+                </p>
                 <p className="font-sans text-sm text-text-muted">
                   {item.caption}
                 </p>

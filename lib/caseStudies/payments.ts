@@ -146,19 +146,24 @@ export const gallery: {
   image: string | null;
 }[] = [
   {
-    label: "Withdrawal Lifecycle",
-    caption: "Payment lifecycle steps shown inline over the transaction list.",
-    image: "/images/projects/payments-01-transactions-detail.png",
+    label: "Payments Overview",
+    caption: "Paid-out totals, monthly volume, and average payment size across the ledger.",
+    image: "/images/projects/payments-08-payments-tab.png",
   },
   {
-    label: "Transactions",
-    caption: "Deposits, withdrawals, chargebacks, and refunds with status and fees in one ledger.",
-    image: "/images/projects/payments-02-transactions-list.png",
+    label: "Failed Payment",
+    caption: "A frozen-account withdrawal halted at compliance check, with the block reason surfaced.",
+    image: "/images/projects/payments-09-payments-detail-failed.png",
   },
   {
     label: "Withdrawals Queue",
     caption: "Pending, completed, and failed withdrawals with approve, decline, and hold actions.",
     image: "/images/projects/payments-03-withdrawals-list.png",
+  },
+  {
+    label: "Withdrawal Detail",
+    caption: "Full lifecycle, integration logs, and PSP notifications for a single withdrawal.",
+    image: "/images/projects/payments-07-withdrawal-detail.png",
   },
   {
     label: "Create Payment — Basic",
@@ -176,23 +181,18 @@ export const gallery: {
     image: "/images/projects/payments-06-withdrawals-create-batch.png",
   },
   {
-    label: "Withdrawal Detail",
-    caption: "Full lifecycle, integration logs, and PSP notifications for a single withdrawal.",
-    image: "/images/projects/payments-07-withdrawal-detail.png",
-  },
-  {
-    label: "Payments Overview",
-    caption: "Paid-out totals, monthly volume, and average payment size across the ledger.",
-    image: "/images/projects/payments-08-payments-tab.png",
-  },
-  {
-    label: "Failed Payment",
-    caption: "A frozen-account withdrawal halted at compliance check, with the block reason surfaced.",
-    image: "/images/projects/payments-09-payments-detail-failed.png",
-  },
-  {
     label: "Create Payment — Custom Amount",
     caption: "Custom partial-amount payout capped at the approved withdrawal total.",
     image: "/images/projects/payments-10-withdrawals-create-custom.png",
+  },
+  {
+    label: "Transactions",
+    caption: "Deposits, withdrawals, chargebacks, and refunds with status and fees in one ledger.",
+    image: "/images/projects/payments-02-transactions-list.png",
+  },
+  {
+    label: "Withdrawal Lifecycle",
+    caption: "Payment lifecycle steps shown inline over the transaction list.",
+    image: "/images/projects/payments-01-transactions-detail.png",
   },
 ];

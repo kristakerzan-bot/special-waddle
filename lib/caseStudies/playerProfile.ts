@@ -312,54 +312,14 @@ export const gallery: {
   image: string;
 }[] = [
   {
+    label: "Player Search",
+    caption: "Filterable player directory with VIP tier, KYC status, and risk-level facets.",
+    image: "/images/projects/player-profile-15-player-search.png",
+  },
+  {
     label: "Profile Overview",
     caption: "Account overview with financial activity and game category breakdown.",
     image: "/images/projects/player-profile-01-overview.png",
-  },
-  {
-    label: "VIP Profile",
-    caption: "VIP tier, lifetime value, and tier progression at a glance.",
-    image: "/images/projects/player-profile-02-vip-profile.png",
-  },
-  {
-    label: "Fraud & Risk Dashboard",
-    caption: "Fraud score, risk signals, and recent alerts in one view.",
-    image: "/images/projects/player-profile-04-fraud-and-risk-dashboard.png",
-  },
-  {
-    label: "Segment Profile",
-    caption: "Active segments, opt-in preferences, and communication stats.",
-    image: "/images/projects/player-profile-05-marketing-segment-profile.png",
-  },
-  {
-    label: "KYC Documents",
-    caption: "Document status, review dates, and verification history.",
-    image: "/images/projects/player-profile-06-compliance-kyc-documents.png",
-  },
-  {
-    label: "Responsible Gaming",
-    caption: "Deposit, withdrawal, and loss limits shown as usage progress bars.",
-    image: "/images/projects/player-profile-07-compliance-responsible-gaming.png",
-  },
-  {
-    label: "Bonus Eligibility",
-    caption: "Bonus history and eligibility scoring for marketing campaigns.",
-    image: "/images/projects/player-profile-08-marketing-bonus-eligibility.png",
-  },
-  {
-    label: "Payment Limits & Controls",
-    caption: "Configurable deposit and withdrawal limits with withdrawal queue status.",
-    image: "/images/projects/player-profile-09-payments-limits-and-controls.png",
-  },
-  {
-    label: "VIP Games Played",
-    caption: "Wagering breakdown by category with full game-level session history.",
-    image: "/images/projects/player-profile-10-vip-games-played.png",
-  },
-  {
-    label: "Transactions",
-    caption: "Deposit and withdrawal history with method, PSP, and status per entry.",
-    image: "/images/projects/player-profile-12-payments-transactions.png",
   },
   {
     label: "Edit Personal Info",
@@ -372,8 +332,48 @@ export const gallery: {
     image: "/images/projects/player-profile-14-compare-players.png",
   },
   {
-    label: "Player Search",
-    caption: "Filterable player directory with VIP tier, KYC status, and risk-level facets.",
-    image: "/images/projects/player-profile-15-player-search.png",
+    label: "VIP Profile",
+    caption: "VIP tier, lifetime value, and tier progression at a glance.",
+    image: "/images/projects/player-profile-02-vip-profile.png",
+  },
+  {
+    label: "VIP Games Played",
+    caption: "Wagering breakdown by category with full game-level session history.",
+    image: "/images/projects/player-profile-10-vip-games-played.png",
+  },
+  {
+    label: "Transactions",
+    caption: "Deposit and withdrawal history with method, PSP, and status per entry.",
+    image: "/images/projects/player-profile-12-payments-transactions.png",
+  },
+  {
+    label: "Payment Limits & Controls",
+    caption: "Configurable deposit and withdrawal limits with withdrawal queue status.",
+    image: "/images/projects/player-profile-09-payments-limits-and-controls.png",
+  },
+  {
+    label: "Fraud & Risk Dashboard",
+    caption: "Fraud score, risk signals, and recent alerts in one view.",
+    image: "/images/projects/player-profile-04-fraud-and-risk-dashboard.png",
+  },
+  {
+    label: "Segment Profile",
+    caption: "Active segments, opt-in preferences, and communication stats.",
+    image: "/images/projects/player-profile-05-marketing-segment-profile.png",
+  },
+  {
+    label: "Bonus Eligibility",
+    caption: "Bonus history and eligibility scoring for marketing campaigns.",
+    image: "/images/projects/player-profile-08-marketing-bonus-eligibility.png",
+  },
+  {
+    label: "KYC Documents",
+    caption: "Document status, review dates, and verification history.",
+    image: "/images/projects/player-profile-06-compliance-kyc-documents.png",
+  },
+  {
+    label: "Responsible Gaming",
+    caption: "Deposit, withdrawal, and loss limits shown as usage progress bars.",
+    image: "/images/projects/player-profile-07-compliance-responsible-gaming.png",
   },
 ];

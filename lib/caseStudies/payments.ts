@@ -4,7 +4,7 @@ export const hero = {
   badge: "UX Audit & Redesign Direction",
   title: "Payments Backoffice: Where Money Meets Usability Risk",
   subtext:
-    "A heuristic evaluation and practitioner-informed field study across 17 payment screens, from audit findings to redesign direction.",
+    "A usability review and frontline-informed field study across 17 payment screens, from audit findings to redesign direction.",
   stats: [
     { value: "17", label: "Screens Reviewed" },
     { value: "12", label: "Findings Documented" },

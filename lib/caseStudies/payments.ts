@@ -146,33 +146,53 @@ export const gallery: {
   image: string | null;
 }[] = [
   {
-    label: "Lifecycle Timeline",
-    caption: "Structured event history replacing JSON",
-    image: null,
+    label: "Withdrawal Lifecycle",
+    caption: "Payment lifecycle steps shown inline over the transaction list.",
+    image: "/images/projects/payments-01-transactions-detail.png",
   },
   {
-    label: "Payment Details",
-    caption: "Integration logs & PSP notifications",
-    image: null,
+    label: "Transactions",
+    caption: "Deposits, withdrawals, chargebacks, and refunds with status and fees in one ledger.",
+    image: "/images/projects/payments-02-transactions-list.png",
   },
   {
-    label: "Create Payment",
-    caption: "Validation-first with real-time totals",
-    image: null,
+    label: "Withdrawals Queue",
+    caption: "Pending, completed, and failed withdrawals with approve, decline, and hold actions.",
+    image: "/images/projects/payments-03-withdrawals-list.png",
   },
   {
-    label: "Bulk Withdrawal",
-    caption: "Bulk withdrawal actions (new capability)",
-    image: null,
+    label: "Create Payment — Basic",
+    caption: "Basic payout flow with requested method and total confirmed before sending.",
+    image: "/images/projects/payments-04-withdrawals-create-basic.png",
   },
   {
-    label: "Transaction Detail",
-    caption: "Parsed fields with raw toggle",
-    image: null,
+    label: "Create Payment — Overrides",
+    caption: "Override the payment method or reference ID before submitting to the PSP.",
+    image: "/images/projects/payments-05-withdrawals-create-overrides.png",
   },
   {
-    label: "Payment Method",
-    caption: "Validated fields, verification integrity",
-    image: null,
+    label: "Create Payment — Batch",
+    caption: "Batch payout combining multiple withdrawal requests into one total.",
+    image: "/images/projects/payments-06-withdrawals-create-batch.png",
+  },
+  {
+    label: "Withdrawal Detail",
+    caption: "Full lifecycle, integration logs, and PSP notifications for a single withdrawal.",
+    image: "/images/projects/payments-07-withdrawal-detail.png",
+  },
+  {
+    label: "Payments Overview",
+    caption: "Paid-out totals, monthly volume, and average payment size across the ledger.",
+    image: "/images/projects/payments-08-payments-tab.png",
+  },
+  {
+    label: "Failed Payment",
+    caption: "A frozen-account withdrawal halted at compliance check, with the block reason surfaced.",
+    image: "/images/projects/payments-09-payments-detail-failed.png",
+  },
+  {
+    label: "Create Payment — Custom Amount",
+    caption: "Custom partial-amount payout capped at the approved withdrawal total.",
+    image: "/images/projects/payments-10-withdrawals-create-custom.png",
   },
 ];

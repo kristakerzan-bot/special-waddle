@@ -12,8 +12,10 @@ type GalleryItem = {
 
 export default function ScreenshotGallery({
   gallery,
+  aspectClassName = "aspect-[4/3]",
 }: {
   gallery: GalleryItem[];
+  aspectClassName?: string;
 }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const active = activeIndex !== null ? gallery[activeIndex] : null;
@@ -37,7 +39,7 @@ export default function ScreenshotGallery({
               onClick={() => item.image && setActiveIndex(index)}
               disabled={!item.image}
               aria-label={item.image ? `Expand ${item.label}` : undefined}
-              className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-white/10 bg-surface disabled:cursor-default"
+              className={`relative ${aspectClassName} w-full overflow-hidden rounded-lg border border-white/10 bg-surface disabled:cursor-default`}
             >
               {item.image ? (
                 <Image
@@ -89,7 +91,7 @@ export default function ScreenshotGallery({
             className="relative w-full max-w-4xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-white/10 bg-surface">
+            <div className={`relative ${aspectClassName} w-full overflow-hidden rounded-lg border border-white/10 bg-surface`}>
               <Image
                 src={active.image}
                 alt={`${active.label} — ${active.caption}`}

@@ -27,13 +27,13 @@ export const methods = [
   },
   {
     index: "03",
-    title: "Practitioner-Informed Scenarios",
-    body: "3 practitioner-informed scenarios based on observed workflow patterns, including Tier-1 ops, fraud analyst, and compliance. Hypothesis set for live validation.",
+    title: "Frontline-Informed Scenarios",
+    body: "3 frontline-informed scenarios based on observed workflow patterns, covering Tier-1 ops, a fraud analyst, and compliance. A starting point, ready to test with real users.",
   },
   {
     index: "04",
-    title: "AI-Assisted Cross-Validation",
-    body: "Ran a parallel exploratory analysis using AI tools against the same screen set, comparing AI-surfaced issues with manual findings to validate coverage and test where automated heuristic detection aligns or diverges from practitioner-grounded research.",
+    title: "AI-Assisted Cross-Check",
+    body: "Ran the same set of screens through AI tools on their own, then compared what the AI flagged against the manual review. This showed where automated checks agreed with hands-on research, and where they missed things a person would catch.",
   },
 ];
 

@@ -87,7 +87,7 @@ export default function PaymentsCaseStudy() {
             <MetaLabel>Methodology</MetaLabel>
             <div className="h-px w-8 bg-accent-light/30" />
             <MetaLabel>
-              {"// Screen review, heuristic evaluation, simulated field research, AI-assisted cross-validation"}
+              {"// Screen review, usability review, simulated field research, AI-assisted cross-check"}
             </MetaLabel>
           </div>
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">

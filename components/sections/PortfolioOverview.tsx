@@ -53,7 +53,7 @@ export default function PortfolioOverview() {
             <p className="max-w-2xl font-sans text-base leading-relaxed text-text-muted">
               Support teams were managing players across dozens of legal
               jurisdictions. In a regulated market, a mistake isn&apos;t just
-              UX debt—it&apos;s a liability.
+              UX debt. It&apos;s a liability.
             </p>
             <NumberedList
               items={[

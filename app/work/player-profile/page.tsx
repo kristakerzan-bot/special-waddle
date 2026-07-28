@@ -115,7 +115,7 @@ export default function PlayerProfileCaseStudy() {
             </h2>
             <p className="max-w-2xl font-sans text-lg leading-relaxed text-text-muted">
               Six roles touch the same player record for entirely different
-              reasons — and today, they&apos;re handed the same
+              reasons, and today, they&apos;re handed the same
               undifferentiated wall of tabs and tables regardless of what they
               came to do.
             </p>

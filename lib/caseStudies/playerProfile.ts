@@ -2,7 +2,7 @@ export const hero = {
   badge: "UX Research & Redesign · Shipped",
   title: "Player Profile: Six Teams, One Overloaded Screen — Redesigned",
   subtext:
-    "A mixed-methods research and redesign initiative for the Player Profile module inside BackOffice — a B2B iGaming SaaS platform serving operators across 3 regions. Sole UX researcher & designer. Shipped, live in production.",
+    "A mixed-methods research and redesign initiative for the Player Profile module inside BackOffice, a B2B iGaming SaaS platform serving operators across 3 regions. Sole UX researcher & designer. Shipped, live in production.",
   stats: [
     { value: "24", label: "Practitioner Interviews" },
     { value: "96", label: "Survey Respondents" },
@@ -15,7 +15,7 @@ export const methods = [
   {
     index: "01",
     title: "Interviews & Shadowing",
-    body: "24 practitioner interviews (45 min each) across 3 regions, plus 14 shadowing sessions — 42 hours observed at the desk — grounding every insight in real workflow.",
+    body: "24 practitioner interviews (45 min each) across 3 regions, plus 14 shadowing sessions, 42 hours observed at the desk, grounding every insight in real workflow.",
   },
   {
     index: "02",
@@ -71,7 +71,7 @@ export const personas: Persona[] = [
     role: "VIP Support Agent",
     subtitle: "High-value player relationship",
     quote:
-      "My players expect me to already know what happened — I can't be found scrolling.",
+      "My players expect me to already know what happened. I can't be found scrolling.",
     volumeLabel: "Daily Volume",
     volumeValue: "10-20 deep sessions",
     pressureLabel: "Time Pressure",
@@ -133,7 +133,7 @@ export const personas: Persona[] = [
     role: "Marketing / CRM Manager",
     subtitle: "Segmentation, bonus targeting, retention",
     quote:
-      "I need to know who this player is before I decide what to send them — today that takes real digging.",
+      "I need to know who this player is before I decide what to send them. Today that takes real digging.",
     volumeLabel: "Daily Volume",
     volumeValue: "20-40 profiles/session",
     pressureLabel: "Time Pressure",
@@ -286,17 +286,17 @@ export const timeBaseline = [
 
 export const nextSteps = {
   heading: "From research findings to production — validated by practitioners",
-  body: "Role-aware layout, an always-visible status rail, and consolidated navigation replaced the flat, unranked tab structure. Follow-up feedback confirmed: faster task completion, fewer errors, clearer status visibility, and less time troubleshooting — across all six roles.",
+  body: "Role-aware layout, an always-visible status rail, and consolidated navigation replaced the flat, unranked tab structure. Follow-up feedback confirmed: faster task completion, fewer errors, clearer status visibility, and less time troubleshooting, across all six roles.",
   columns: [
     {
       index: "01",
       title: "Role-Aware Layout",
-      body: "Dynamic surfacing based on agent's regulatory role — no more undifferentiated walls of tabs. Each persona sees what matters first.",
+      body: "Dynamic surfacing based on agent's regulatory role. No more undifferentiated walls of tabs. Each persona sees what matters first.",
     },
     {
       index: "02",
       title: "Unified Status Rail",
-      body: "Critical flags, risk signals, and alerts unified into a persistent sidebar — visible from every view, not buried in a single KYC tab.",
+      body: "Critical flags, risk signals, and alerts unified into a persistent sidebar, visible from every view, not buried in a single KYC tab.",
     },
     {
       index: "03",

@@ -158,7 +158,7 @@ export default function PaymentsCaseStudy() {
             </h2>
             <p className="max-w-2xl font-sans text-lg leading-relaxed text-text-muted">
               Three practitioner-informed scenarios modeling what live
-              observation would surface — hypothesis set for validation with
+              observation would surface, a hypothesis set for validation with
               real ops teams.
             </p>
           </div>

@@ -4,7 +4,7 @@ export const hero = {
   badge: "UX Audit & Redesign Direction",
   title: "Payments Backoffice: Where Money Meets Usability Risk",
   subtext:
-    "A heuristic evaluation and practitioner-informed field study across 17 payment screens — from audit findings to redesign direction.",
+    "A heuristic evaluation and practitioner-informed field study across 17 payment screens, from audit findings to redesign direction.",
   stats: [
     { value: "17", label: "Screens Reviewed" },
     { value: "12", label: "Findings Documented" },
@@ -18,7 +18,7 @@ export const methods = [
   {
     index: "01",
     title: "Screen Review",
-    body: "17 production screens walked through — payment methods, transaction details, withdrawal flows, and the in-progress Lifecycle redesign.",
+    body: "17 production screens walked through, including payment methods, transaction details, withdrawal flows, and the in-progress Lifecycle redesign.",
   },
   {
     index: "02",
@@ -28,12 +28,12 @@ export const methods = [
   {
     index: "03",
     title: "Practitioner-Informed Scenarios",
-    body: "3 practitioner-informed scenarios based on observed workflow patterns — Tier-1 ops, fraud analyst, compliance. Hypothesis set for live validation.",
+    body: "3 practitioner-informed scenarios based on observed workflow patterns, including Tier-1 ops, fraud analyst, and compliance. Hypothesis set for live validation.",
   },
   {
     index: "04",
     title: "AI-Assisted Cross-Validation",
-    body: "Ran a parallel exploratory analysis using AI tools against the same screen set — comparing AI-surfaced issues with manual findings to validate coverage and test where automated heuristic detection aligns or diverges from practitioner-grounded research.",
+    body: "Ran a parallel exploratory analysis using AI tools against the same screen set, comparing AI-surfaced issues with manual findings to validate coverage and test where automated heuristic detection aligns or diverges from practitioner-grounded research.",
   },
 ];
 
@@ -45,43 +45,43 @@ export const severityCounts = [
 ];
 
 export const findingsIntro =
-  "12 findings ranked by financial exposure and frequency. The critical issue — a Verified badge persisting on garbage bank data — represents live compliance risk.";
+  "12 findings ranked by financial exposure and frequency. The critical issue, a Verified badge persisting on garbage bank data, represents live compliance risk.";
 
 export const findings: Finding[] = [
   {
     name: "Verified Badge on Invalid Data",
     severity: "critical",
-    body: "Free-text bank fields accept garbage input even after Verified status — breaks KYC/AML integrity.",
+    body: "Free-text bank fields accept garbage input even after Verified status, breaking KYC/AML integrity.",
   },
   {
     name: "Partial Amount Exceeds Approved",
     severity: "high",
-    body: "Partial amount can exceed the originally approved amount with no cap — logically contradictory state.",
+    body: "Partial amount can exceed the originally approved amount with no cap, a logically contradictory state.",
   },
   {
     name: "Raw JSON Blocks Investigation",
     severity: "high",
-    body: "Transaction remark is an unformatted JSON blob — agents hand-parse to find auth codes under chargeback deadlines.",
+    body: "Transaction remark is an unformatted JSON blob. Agents hand-parse it to find auth codes under chargeback deadlines.",
   },
   {
     name: "Misleading Withdrawal Action Labels",
     severity: "high",
-    body: "Withdrawal action labels are ambiguous — \"Cancel\" unclear whether it cancels the request or the agent's action; \"Decline\" unclear whether it rejects permanently or sends back for review. High-stakes confusion on money flows.",
+    body: "Withdrawal action labels are ambiguous. \"Cancel\" unclear whether it cancels the request or the agent's action; \"Decline\" unclear whether it rejects permanently or sends back for review. High-stakes confusion on money flows.",
   },
   {
     name: "No Bulk Withdrawal Actions",
     severity: "medium",
-    body: "No bulk actions existed — agents processed one withdrawal at a time, creating repetitive manual work and slowing high-volume shifts significantly.",
+    body: "No bulk actions existed. Agents processed one withdrawal at a time, creating repetitive manual work and slowing high-volume shifts significantly.",
   },
   {
     name: "Transaction ID Not Linked to Details",
     severity: "medium",
-    body: "Transaction IDs in the payments section are not clickable — agents must navigate to the Transactions tab separately to view details. Breaks contextual flow during withdrawal review.",
+    body: "Transaction IDs in the payments section are not clickable. Agents must navigate to the Transactions tab separately to view details. Breaks contextual flow during withdrawal review.",
   },
   {
     name: "Icon-Only Action With No Label",
     severity: "low",
-    body: "Blue circular-arrow icon next to transaction rows has no tooltip or legend — new agents must guess or ask what it does. Recognition over recall violation.",
+    body: "Blue circular-arrow icon next to transaction rows has no tooltip or legend. New agents must guess or ask what it does. Recognition over recall violation.",
   },
 ];
 
@@ -98,7 +98,7 @@ export const scenarios: Scenario[] = [
     role: "Payments / Cage Agent",
     context: "Processing pending withdrawal requests at shift start",
     quote:
-      "I process withdrawals one by one — and every time I hit 'Cancel' I have to pause and think: am I cancelling the withdrawal or cancelling what I'm doing right now?",
+      "I process withdrawals one by one, and every time I hit 'Cancel' I have to pause and think: am I cancelling the withdrawal or cancelling what I'm doing right now?",
   },
   {
     name: "Marko",
@@ -112,13 +112,13 @@ export const scenarios: Scenario[] = [
     role: "AML & Compliance Officer",
     context: "Verifying a wire transfer account before large release",
     quote:
-      "Verified just means someone clicked the button — it doesn't mean the data was actually checked.",
+      "Verified just means someone clicked the button. It doesn't mean the data was actually checked.",
   },
 ];
 
 export const redesignDirection = {
   heading: "A pattern already proving its value",
-  body: "The Lifecycle timeline already demonstrates the target — structured, scannable, timestamped event history replacing opaque JSON. Agents reported faster scanning in early feedback. The recommendation: finish rolling it out, while fixing the critical verification gap and high-severity action-label issues first.",
+  body: "The Lifecycle timeline already demonstrates the target, a structured, scannable, timestamped event history replacing opaque JSON. Agents reported faster scanning in early feedback. The recommendation: finish rolling it out, while fixing the critical verification gap and high-severity action-label issues first.",
   columns: [
     {
       index: "01",

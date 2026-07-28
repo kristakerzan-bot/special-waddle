@@ -6,22 +6,17 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <Link
       href={`/work/${project.slug}`}
-      className="group flex flex-1 flex-col overflow-hidden rounded-xl border border-white/10 bg-surface shadow-[0_16px_32px_-8px_rgba(0,0,0,0.25)] transition-colors hover:border-white/20"
+      className="group flex h-full flex-col overflow-hidden rounded-xl border border-white/10 bg-surface shadow-[0_16px_32px_-8px_rgba(0,0,0,0.25)] transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_24px_48px_-12px_rgba(0,0,0,0.4)]"
     >
-      <div className="relative h-[220px] w-full border-b border-white/10">
+      <div className="relative h-[220px] w-full overflow-hidden border-b border-white/10">
         <Image
           src={project.coverImage}
           alt=""
           fill
           unoptimized
-          className="object-cover"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-bg/70" />
-        <div className="absolute left-4 top-4 flex gap-[6px]">
-          <span className="size-2 rounded-full bg-red-500/40" />
-          <span className="size-2 rounded-full bg-yellow-500/40" />
-          <span className="size-2 rounded-full bg-green-500/40" />
-        </div>
       </div>
 
       <div className="flex flex-col gap-4 p-6">

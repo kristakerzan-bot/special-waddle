@@ -5,8 +5,13 @@ import { notFound } from "next/navigation";
 import Container from "@/components/primitives/Container";
 import { getProject, projects } from "@/lib/projects";
 
+// player-profile, payments, and rules have their own dedicated pages
+const DEDICATED_SLUGS = ["player-profile", "payments", "rules"];
+
 export function generateStaticParams() {
-  return projects.map((project) => ({ slug: project.slug }));
+  return projects
+    .filter((project) => !DEDICATED_SLUGS.includes(project.slug))
+    .map((project) => ({ slug: project.slug }));
 }
 
 export async function generateMetadata({
@@ -57,14 +62,21 @@ export default async function ProjectPage({
           </p>
         </div>
 
-        <div className="relative aspect-[683/367] w-full overflow-hidden rounded-2xl border border-white/10 bg-surface">
-          <Image
-            src={project.coverImage}
-            alt=""
-            fill
-            unoptimized
-            className="object-cover"
-          />
+        <div className="flex flex-col gap-6">
+          {project.gallery.map((image, index) => (
+            <div
+              key={image}
+              className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/10 bg-surface"
+            >
+              <Image
+                src={image}
+                alt={`${project.title} — screen ${index + 1}`}
+                fill
+                unoptimized
+                className="object-contain"
+              />
+            </div>
+          ))}
         </div>
 
         <p className="max-w-2xl font-sans text-sm text-text-muted">

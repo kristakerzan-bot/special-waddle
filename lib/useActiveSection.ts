@@ -1,12 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { NAV_SECTIONS, type SectionId } from "./sections";
 
 export function useActiveSection() {
-  const [activeId, setActiveId] = useState<SectionId>(NAV_SECTIONS[0].id);
+  const pathname = usePathname();
+  const [activeId, setActiveId] = useState<SectionId | null>(null);
 
   useEffect(() => {
+    if (pathname !== "/") return;
+
     const elements = NAV_SECTIONS.map(({ id }) => document.getElementById(id)).filter(
       (el): el is HTMLElement => el !== null,
     );
@@ -26,7 +30,7 @@ export function useActiveSection() {
 
     elements.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
-  return activeId;
+  return pathname === "/" ? activeId : null;
 }

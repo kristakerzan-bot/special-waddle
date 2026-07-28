@@ -1,11 +1,14 @@
 import Container from "@/components/primitives/Container";
+import Reveal from "@/components/primitives/Reveal";
 
 const TOOLS = [
   "Figma / Figma Make",
   "UX Pilot / AI-fluent",
   "Claude / FigJam",
+  "GitHub",
   "Miro / Maze",
   "Adobe Creative Suite",
+  "Earlier: InVision",
 ];
 
 const EXPERTISE = [
@@ -20,7 +23,7 @@ const LANGUAGES = [
   { name: "Slovenian", level: "Native" },
   { name: "English", level: "Fluent" },
   { name: "Croatian", level: "Fluent" },
-  { name: "Italian", level: "Conversational" },
+  { name: "Italian", level: "Basic Conversational" },
   { name: "Spanish", level: "Basic" },
 ];
 
@@ -36,7 +39,7 @@ export default function Toolkit() {
   return (
     <section className="border-t border-white/5 py-24">
       <Container className="grid gap-10 md:grid-cols-4">
-        <div className="flex flex-col gap-6">
+        <Reveal className="flex flex-col gap-6">
           <ColumnHeading>What I Use</ColumnHeading>
           <ul className="flex flex-col gap-3">
             {TOOLS.map((tool, index) => (
@@ -46,13 +49,13 @@ export default function Toolkit() {
                   index === TOOLS.length - 1 ? "italic opacity-50 text-xs" : ""
                 }`}
               >
-                {index === TOOLS.length - 1 ? `Earlier: ${tool}` : tool}
+                {tool}
               </li>
             ))}
           </ul>
-        </div>
+        </Reveal>
 
-        <div className="flex flex-col gap-6">
+        <Reveal delay={100} className="flex flex-col gap-6">
           <ColumnHeading>Expertise</ColumnHeading>
           <ul className="flex flex-col gap-3">
             {EXPERTISE.map((item) => (
@@ -61,9 +64,9 @@ export default function Toolkit() {
               </li>
             ))}
           </ul>
-        </div>
+        </Reveal>
 
-        <div className="flex flex-col gap-6">
+        <Reveal delay={200} className="flex flex-col gap-6">
           <ColumnHeading>Languages</ColumnHeading>
           <ul className="flex flex-col gap-3">
             {LANGUAGES.map((lang) => (
@@ -77,9 +80,9 @@ export default function Toolkit() {
               </li>
             ))}
           </ul>
-        </div>
+        </Reveal>
 
-        <div className="flex flex-col gap-2">
+        <Reveal delay={300} className="flex flex-col gap-2">
           <ColumnHeading>Education</ColumnHeading>
           <div className="pt-6">
             <p className="font-sans text-sm font-bold text-text-primary">
@@ -89,7 +92,7 @@ export default function Toolkit() {
               Academy of Design
             </p>
           </div>
-        </div>
+        </Reveal>
       </Container>
     </section>
   );

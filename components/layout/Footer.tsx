@@ -12,13 +12,15 @@ export default function Footer() {
         </div>
         <nav className="flex gap-6">
           <a
-            href="mailto:hello@example.com"
+            href="mailto:kristina.kerzan@gmail.com"
             className="font-sans text-[13px] text-text-muted transition-colors hover:text-text-primary"
           >
-            Email
+            Contact
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/krista-kerzan/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="font-sans text-[13px] text-text-muted transition-colors hover:text-text-primary"
           >
             LinkedIn

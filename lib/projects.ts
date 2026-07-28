@@ -4,6 +4,7 @@ export type Project = {
   title: string;
   summary: string;
   coverImage: string;
+  gallery: string[];
 };
 
 export const projects: Project[] = [
@@ -13,7 +14,8 @@ export const projects: Project[] = [
     title: "Player Profile",
     summary:
       "Optimized administrative tools built to handle massive complex user profiles while seamlessly ensuring jurisdiction-level legal compliance and guardrails.",
-    coverImage: "/images/projects/player-profile.svg",
+    coverImage: "/images/projects/player-profile-01-overview.png",
+    gallery: ["/images/projects/player-profile-01-overview.png"],
   },
   {
     slug: "payments",
@@ -21,15 +23,17 @@ export const projects: Project[] = [
     title: "Payments",
     summary:
       "Streamlined multicurrency ledger entries with bulletproof validation design, reducing transactional drop-off rates and visual backoffice noise.",
-    coverImage: "/images/projects/payments.svg",
+    coverImage: "/images/projects/payments-08-payments-tab.png",
+    gallery: ["/images/projects/payments-08-payments-tab.png"],
   },
   {
-    slug: "integration-configuration",
-    category: "Platform Integration // Config Management",
-    title: "Integration & Configuration",
+    slug: "rules",
+    category: "Risk & Compliance // Rule Engine Architecture",
+    title: "Rules",
     summary:
-      "A visual modular mapping console letting engineers and external vendors wire integrations securely without direct code configuration.",
-    coverImage: "/images/projects/integration-configuration.svg",
+      "Rebuilt a legacy code-only fraud and compliance rule engine into a dual-mode builder, letting technical and non-technical teams write the same logic in the way each one thinks.",
+    coverImage: "/images/projects/rules.svg",
+    gallery: ["/images/projects/rules.svg"],
   },
 ];
 

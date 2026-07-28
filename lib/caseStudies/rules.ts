@@ -175,11 +175,6 @@ export const gallery: {
     image: "/images/projects/rules-01-library.png",
   },
   {
-    label: "New Rule: Step 1",
-    caption: "Rule Info",
-    image: null,
-  },
-  {
     label: "Visual Builder",
     caption: "Conditions & Actions",
     image: "/images/projects/rules-02-visual-builder-conditions.png",
@@ -188,11 +183,6 @@ export const gallery: {
     label: "Code Editor",
     caption: "Attribute-Aware",
     image: "/images/projects/rules-03-code-editor-attributes.png",
-  },
-  {
-    label: "Code Editor",
-    caption: "Actions Selected",
-    image: null,
   },
   {
     label: "Rule Detail",

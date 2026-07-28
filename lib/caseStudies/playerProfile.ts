@@ -35,11 +35,11 @@ export type Persona = {
   role: string;
   subtitle: string;
   quote: string;
-  volumeLabel: string;
-  volumeValue: string;
-  pressureLabel: string;
-  pressureValue: string;
-  pressureTone: "high" | "medium" | "low";
+  volumeLabel?: string;
+  volumeValue?: string;
+  pressureLabel?: string;
+  pressureValue?: string;
+  pressureTone?: "high" | "medium" | "low";
   comesHereTo: string[];
   fightsWith: string[];
 };

@@ -27,13 +27,13 @@ export const projects: Project[] = [
     gallery: ["/images/projects/payments-08-payments-tab.png"],
   },
   {
-    slug: "integration-configuration",
-    category: "Platform Integration // Config Management",
-    title: "Integration & Configuration",
+    slug: "rules",
+    category: "Risk & Compliance // Rule Engine Architecture",
+    title: "Rules",
     summary:
-      "A visual modular mapping console letting engineers and external vendors wire integrations securely without direct code configuration.",
-    coverImage: "/images/projects/integration-configuration.svg",
-    gallery: ["/images/projects/integration-configuration.svg"],
+      "Rebuilt a legacy code-only fraud and compliance rule engine into a dual-mode builder, letting technical and non-technical teams write the same logic in the way each one thinks.",
+    coverImage: "/images/projects/rules.svg",
+    gallery: ["/images/projects/rules.svg"],
   },
 ];
 

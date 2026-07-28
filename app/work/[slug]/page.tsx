@@ -5,8 +5,8 @@ import { notFound } from "next/navigation";
 import Container from "@/components/primitives/Container";
 import { getProject, projects } from "@/lib/projects";
 
-// player-profile and payments have their own dedicated pages
-const DEDICATED_SLUGS = ["player-profile", "payments"];
+// player-profile, payments, and rules have their own dedicated pages
+const DEDICATED_SLUGS = ["player-profile", "payments", "rules"];
 
 export function generateStaticParams() {
   return projects

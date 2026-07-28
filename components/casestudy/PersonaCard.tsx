@@ -35,26 +35,28 @@ export default function PersonaCard({ persona }: { persona: Persona }) {
         &ldquo;{persona.quote}&rdquo;
       </p>
 
-      <div className="flex gap-4">
-        <div className="flex-1">
-          <p className="font-mono text-xs text-text-muted">
-            {persona.volumeLabel}
-          </p>
-          <p className="font-sans text-sm font-bold text-text-primary">
-            {persona.volumeValue}
-          </p>
+      {persona.pressureTone && (
+        <div className="flex gap-4">
+          <div className="flex-1">
+            <p className="font-mono text-xs text-text-muted">
+              {persona.volumeLabel}
+            </p>
+            <p className="font-sans text-sm font-bold text-text-primary">
+              {persona.volumeValue}
+            </p>
+          </div>
+          <div className="flex-1">
+            <p className="font-mono text-xs text-text-muted">
+              {persona.pressureLabel}
+            </p>
+            <p
+              className={`font-sans text-sm font-bold ${PRESSURE_COLORS[persona.pressureTone]}`}
+            >
+              {persona.pressureValue}
+            </p>
+          </div>
         </div>
-        <div className="flex-1">
-          <p className="font-mono text-xs text-text-muted">
-            {persona.pressureLabel}
-          </p>
-          <p
-            className={`font-sans text-sm font-bold ${PRESSURE_COLORS[persona.pressureTone]}`}
-          >
-            {persona.pressureValue}
-          </p>
-        </div>
-      </div>
+      )}
 
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">

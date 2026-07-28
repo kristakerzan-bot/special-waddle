@@ -103,7 +103,7 @@ export default function PortfolioOverview() {
                 <MetaLabel>Rapid Prototyping Stepper</MetaLabel>
               </div>
               <div className="flex items-center justify-between">
-                {["01", "02", "03", "04"].map((step, index) => (
+                {["01", "02", "03"].map((step, index) => (
                   <div key={step} className="flex flex-1 items-center">
                     <div
                       className={`flex size-8 items-center justify-center rounded-full border font-mono text-[10px] transition-colors duration-500 ${
@@ -115,7 +115,7 @@ export default function PortfolioOverview() {
                     >
                       {step}
                     </div>
-                    {index < 3 && (
+                    {index < 2 && (
                       <div className="mx-2 h-px flex-1 bg-white/10" />
                     )}
                   </div>
@@ -123,15 +123,32 @@ export default function PortfolioOverview() {
               </div>
 
               <div className="mt-8 grid grid-cols-3 gap-4">
-                {["Step 1", "Step 2", "Step 3"].map((label) => (
-                  <div key={label} className="flex flex-col gap-2">
-                    <div className="flex aspect-[4/3] w-full items-center justify-center rounded-lg border border-dashed border-white/15 bg-bg/40">
-                      <p className="px-2 text-center font-sans text-xs text-text-muted">
-                        ↑ Drop screenshot here
-                      </p>
+                {[
+                  {
+                    label: "Contribution Info",
+                    image: "/images/projects/loyalty-01-new-contribution-step-1.png",
+                  },
+                  {
+                    label: "Contribution Logic",
+                    image: "/images/projects/loyalty-03-contribution-logic.png",
+                  },
+                  {
+                    label: "Display",
+                    image: "/images/projects/loyalty-04-display.png",
+                  },
+                ].map((step) => (
+                  <div key={step.label} className="flex flex-col gap-2">
+                    <div className="relative aspect-[3/2] w-full overflow-hidden rounded-lg border border-white/10 bg-bg/40">
+                      <Image
+                        src={step.image}
+                        alt={`${step.label} — loyalty contribution wizard`}
+                        fill
+                        sizes="(max-width: 768px) 33vw, 220px"
+                        className="object-cover object-top"
+                      />
                     </div>
                     <p className="text-center font-mono text-[9px] uppercase tracking-[0.1em] text-text-muted">
-                      {label}
+                      {step.label}
                     </p>
                   </div>
                 ))}

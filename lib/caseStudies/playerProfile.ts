@@ -322,11 +322,6 @@ export const gallery: {
     image: "/images/projects/player-profile-01-overview.png",
   },
   {
-    label: "Edit Personal Info",
-    caption: "Editable personal information fields with save and cancel actions.",
-    image: "/images/projects/player-profile-13-overview-edit.png",
-  },
-  {
     label: "Compare Players",
     caption: "Side-by-side comparison of two accounts across identity, account, and financial attributes.",
     image: "/images/projects/player-profile-14-compare-players.png",
@@ -335,11 +330,6 @@ export const gallery: {
     label: "VIP Profile",
     caption: "VIP tier, lifetime value, and tier progression at a glance.",
     image: "/images/projects/player-profile-02-vip-profile.png",
-  },
-  {
-    label: "VIP Games Played",
-    caption: "Wagering breakdown by category with full game-level session history.",
-    image: "/images/projects/player-profile-10-vip-games-played.png",
   },
   {
     label: "Transactions",
@@ -362,18 +352,8 @@ export const gallery: {
     image: "/images/projects/player-profile-05-marketing-segment-profile.png",
   },
   {
-    label: "Bonus Eligibility",
-    caption: "Bonus history and eligibility scoring for marketing campaigns.",
-    image: "/images/projects/player-profile-08-marketing-bonus-eligibility.png",
-  },
-  {
     label: "KYC Documents",
     caption: "Document status, review dates, and verification history.",
     image: "/images/projects/player-profile-06-compliance-kyc-documents.png",
-  },
-  {
-    label: "Responsible Gaming",
-    caption: "Deposit, withdrawal, and loss limits shown as usage progress bars.",
-    image: "/images/projects/player-profile-07-compliance-responsible-gaming.png",
   },
 ];

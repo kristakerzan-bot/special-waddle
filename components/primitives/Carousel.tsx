@@ -35,6 +35,25 @@ export default function Carousel({
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
+      <div className="flex items-center justify-between">
+        {slides.map((slide, index) => (
+          <div key={slide.image} className="flex flex-1 items-center">
+            <div
+              className={`flex size-8 shrink-0 items-center justify-center rounded-full border font-mono text-[10px] transition-colors duration-300 ${
+                index === active
+                  ? "border-accent bg-accent text-bg"
+                  : "border-white/15 text-text-muted"
+              }`}
+            >
+              {String(index + 1).padStart(2, "0")}
+            </div>
+            {index < slides.length - 1 && (
+              <div className="mx-2 h-px flex-1 bg-white/10" />
+            )}
+          </div>
+        ))}
+      </div>
+
       <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl border border-white/10 bg-bg/40">
         <div
           className="flex h-full w-full transition-transform duration-700 ease-in-out"
@@ -48,7 +67,7 @@ export default function Carousel({
                 fill
                 sizes="(max-width: 768px) 100vw, 560px"
                 priority={index === 0}
-                className="object-cover object-top"
+                className="object-contain"
               />
             </div>
           ))}
@@ -90,24 +109,9 @@ export default function Carousel({
         </button>
       </div>
 
-      <div className="flex items-center justify-between">
-        <p className="font-mono text-[10px] uppercase tracking-[0.1em] text-text-muted">
-          {slides[active].label}
-        </p>
-        <div className="flex gap-2">
-          {slides.map((slide, index) => (
-            <button
-              key={slide.image}
-              type="button"
-              onClick={() => setActive(index)}
-              aria-label={`Show ${slide.label}`}
-              className={`size-2 rounded-full transition-colors ${
-                index === active ? "bg-accent" : "bg-white/20 hover:bg-white/40"
-              }`}
-            />
-          ))}
-        </div>
-      </div>
+      <p className="text-center font-mono text-[10px] uppercase tracking-[0.1em] text-text-muted">
+        {slides[active].label}
+      </p>
     </div>
   );
 }

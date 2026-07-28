@@ -16,6 +16,10 @@ const PROTOTYPE_SLIDES = [
     label: "Contribution Info",
   },
   {
+    image: "/images/projects/loyalty-02-configuration.png",
+    label: "Configuration",
+  },
+  {
     image: "/images/projects/loyalty-03-contribution-logic.png",
     label: "Contribution Logic",
   },

@@ -285,23 +285,23 @@ export const timeBaseline = [
 ];
 
 export const nextSteps = {
-  heading: "From research findings to production — validated by practitioners",
-  body: "Role-aware layout, an always-visible status rail, and consolidated navigation replaced the flat, unranked tab structure. Follow-up feedback confirmed: faster task completion, fewer errors, clearer status visibility, and less time troubleshooting, across all six roles.",
+  heading: "From research findings to production: validated by frontline teams",
+  body: "Role-aware layout, an always-visible status rail, and consolidated navigation replaced the flat, unranked tab structure. Follow-up feedback confirmed faster task completion, fewer errors, clearer status visibility, and less time troubleshooting, across all six roles.",
   columns: [
     {
       index: "01",
       title: "Role-Aware Layout",
-      body: "Dynamic surfacing based on agent's regulatory role. No more undifferentiated walls of tabs. Each persona sees what matters first.",
+      body: "Shows the right information based on each agent's regulatory role, instead of one long wall of identical tabs. Every role sees what matters most, first.",
     },
     {
       index: "02",
       title: "Unified Status Rail",
-      body: "Critical flags, risk signals, and alerts unified into a persistent sidebar, visible from every view, not buried in a single KYC tab.",
+      body: "Critical flags, risk signals, and alerts now live in a sidebar that's visible from every view, not buried inside a single KYC tab.",
     },
     {
       index: "03",
-      title: "Non-Blocking Flows",
-      body: "Inline error recovery and fewer clicks between find-player and resolve-case. Common workflows mapped to native shortcuts, cutting median task times.",
+      title: "Smoother Workflows",
+      body: "Errors get fixed right where they happen, with fewer clicks between finding a player and resolving their case. Common workflows now have keyboard shortcuts, cutting typical task times.",
     },
   ],
 };

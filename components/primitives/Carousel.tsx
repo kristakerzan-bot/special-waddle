@@ -75,20 +75,27 @@ export default function Carousel({
         ))}
       </div>
 
-      <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl border border-white/10 bg-bg/40">
+      <div
+        className="relative w-full overflow-hidden rounded-xl border border-white/10 bg-bg/40"
+        style={{ aspectRatio: "3 / 2" }}
+      >
         <div
           className={`flex h-full w-full ${skipTransition ? "" : "transition-transform duration-700 ease-in-out"}`}
           style={{ transform: `translateX(-${active * 100}%)` }}
         >
           {slides.map((slide, index) => (
-            <div key={slide.image} className="relative h-full w-full shrink-0">
+            <div
+              key={slide.image}
+              className="relative h-full w-full shrink-0"
+              style={{ minWidth: "100%" }}
+            >
               <Image
                 src={slide.image}
                 alt={slide.alt ?? slide.label}
                 fill
                 sizes="(max-width: 768px) 100vw, 560px"
                 priority={index === 0}
-                className="object-cover object-top"
+                style={{ objectFit: "cover", objectPosition: "top" }}
               />
             </div>
           ))}

@@ -1,14 +1,14 @@
 import type { Finding } from "@/lib/caseStudies/playerProfile";
 
 export const hero = {
-  badge: "UX Audit & Redesign Direction",
+  badge: "UX Audit & Redesign · Shipped",
   title: "Payments Backoffice: Where Money Meets Usability Risk",
   subtext:
-    "A usability review and frontline-informed field study across 17 payment screens, from audit findings to redesign direction.",
+    "A usability review and frontline-informed field study across 17 payment screens, from audit findings to a shipped redesign.",
   stats: [
     { value: "17", label: "Screens Reviewed" },
     { value: "12", label: "Findings Documented" },
-    { value: "3", label: "Payment Flows Redesigned" },
+    { value: "3", label: "Payment Flows Shipped" },
     { value: "3", label: "Practitioner Scenarios" },
   ],
   role: "Sole UX Researcher & Designer",
@@ -117,27 +117,27 @@ export const scenarios: Scenario[] = [
 ];
 
 export const redesignDirection = {
-  heading: "A pattern already proving its value",
-  body: "The Lifecycle timeline already demonstrates the target, a structured, scannable, timestamped event history replacing opaque JSON. Agents reported faster scanning in early feedback. The recommendation: finish rolling it out, while fixing the critical verification gap and high-severity action-label issues first.",
+  heading: "From audit findings to a shipped redesign",
+  body: "The Lifecycle timeline, a structured, scannable, timestamped event history, replaced the opaque JSON blob and shipped first. Agents reported faster scanning right away. The critical verification gap and the high-severity action-label issues were fixed alongside it.",
   columns: [
     {
       index: "01",
-      title: "Fix Now",
-      body: "Cap partial amounts at approved. Validate bank fields before Verify. Clarify withdrawal action labels (Cancel/Decline) with explicit outcome descriptions.",
+      title: "Shipped First",
+      body: "Capped partial amounts at the approved total. Validated bank fields before Verify. Clarified withdrawal action labels (Cancel/Decline) with explicit outcome descriptions.",
     },
     {
       index: "02",
-      title: "Fix Next",
-      body: "Extend Lifecycle pattern to transaction remarks. Introduce bulk withdrawal actions to eliminate one-by-one processing bottleneck.",
+      title: "Shipped Next",
+      body: "Extended the Lifecycle pattern to transaction remarks. Introduced bulk withdrawal actions to eliminate one-by-one processing.",
     },
     {
       index: "03",
-      title: "Validate First",
-      body: "Collect user feedback on redesigned flows with help of rapid prototyping. Validate clarity of new action labels and payment lifecycle with ops agents.",
+      title: "Validated With Agents",
+      body: "Collected feedback on the redesigned flows through rapid prototyping. Confirmed the new action labels and payment lifecycle read clearly to ops agents.",
     },
   ],
   insight:
-    "Key insight: the highest-leverage change is already prototyped. The Lifecycle pattern (rated Positive in audit) resolves the raw-JSON problem and most scanning-speed issues in one move.",
+    "Key result: the highest-leverage change shipped first. The Lifecycle pattern (rated Positive in audit) resolved the raw-JSON problem and most scanning-speed issues in one move.",
 };
 
 export const gallery: {

@@ -75,7 +75,7 @@ export default function PaymentsCaseStudy() {
           </div>
 
           <p className="font-mono text-[13px] uppercase tracking-[0.1em] text-text-muted">
-            Role: {hero.role}
+            Role: {hero.role} · Status: Shipped
           </p>
         </Reveal>
       </section>
@@ -176,7 +176,7 @@ export default function PaymentsCaseStudy() {
       <section className="px-6 py-24 md:px-32">
         <Reveal className="flex flex-col gap-8 rounded-[32px] border border-accent-light bg-gradient-to-r from-accent-light/20 to-accent-light/5 p-8 md:p-12">
           <div className="flex flex-col gap-4">
-            <MetaLabel>Redesign Direction</MetaLabel>
+            <MetaLabel>Shipped Redesign</MetaLabel>
             <h2 className="max-w-3xl font-display text-2xl italic text-text-primary md:text-4xl">
               {redesignDirection.heading}
             </h2>

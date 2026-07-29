@@ -146,48 +146,53 @@ export const gallery: {
   image: string | null;
 }[] = [
   {
-    label: "Withdrawals Queue",
-    caption: "Pending, completed, and failed withdrawals with approve, decline, and hold actions.",
-    image: "/images/projects/payments-03-withdrawals-list.png",
+    label: "Transactions",
+    caption: "Deposits, withdrawals, chargebacks, and refunds with status and fees in one ledger.",
+    image: "/images/projects/payments-01-transactions-list.png",
   },
   {
-    label: "Withdrawal Detail",
-    caption: "Full lifecycle, integration logs, and PSP notifications for a single withdrawal.",
-    image: "/images/projects/payments-07-withdrawal-detail.png",
+    label: "Transaction Detail",
+    caption: "Full lifecycle and integration logs for a single transaction.",
+    image: "/images/projects/payments-02-transaction-detail.png",
   },
   {
-    label: "Create Payment — Basic",
-    caption: "Basic payout flow with requested method and total confirmed before sending.",
-    image: "/images/projects/payments-04-withdrawals-create-basic.png",
+    label: "Withdrawal Requests",
+    caption: "Pending withdrawal requests with approve, decline, and hold actions.",
+    image: "/images/projects/payments-03-withdrawal-requests.png",
   },
   {
-    label: "Create Payment — Overrides",
-    caption: "Override the payment method or reference ID before submitting to the PSP.",
-    image: "/images/projects/payments-05-withdrawals-create-overrides.png",
+    label: "Withdrawal Review",
+    caption: "Audit checklist for a request: verify method, check gameplay, confirm, or disable cancellation.",
+    image: "/images/projects/payments-04-withdrawal-review.png",
+  },
+  {
+    label: "Process Payment",
+    caption: "Confirm and process an approved withdrawal out to the player.",
+    image: "/images/projects/payments-05-process-payment.png",
+  },
+  {
+    label: "Place on Hold",
+    caption: "Pause a withdrawal for manual review, with a duration and optional reason.",
+    image: "/images/projects/payments-06-place-on-hold.png",
+  },
+  {
+    label: "Decline Transaction",
+    caption: "Irreversible decline confirmation with a required reason and audit note.",
+    image: "/images/projects/payments-07-decline-transaction.png",
   },
   {
     label: "Create Payment — Batch",
     caption: "Batch payout combining multiple withdrawal requests into one total.",
-    image: "/images/projects/payments-06-withdrawals-create-batch.png",
+    image: "/images/projects/payments-08-create-payment-batch.png",
   },
   {
-    label: "Create Payment — Custom Amount",
-    caption: "Custom partial-amount payout capped at the approved withdrawal total.",
-    image: "/images/projects/payments-10-withdrawals-create-custom.png",
-  },
-  {
-    label: "Transactions",
-    caption: "Deposits, withdrawals, chargebacks, and refunds with status and fees in one ledger.",
-    image: "/images/projects/payments-02-transactions-list.png",
-  },
-  {
-    label: "Withdrawal Lifecycle",
-    caption: "Payment lifecycle steps shown inline over the transaction list.",
-    image: "/images/projects/payments-01-transactions-detail.png",
+    label: "Payout Detail",
+    caption: "Full lifecycle from payment created to settled, with process, hold, and decline actions.",
+    image: "/images/projects/payments-09-payout-detail.png",
   },
   {
     label: "Payments Overview",
     caption: "Paid-out totals, monthly volume, and average payment size across the ledger.",
-    image: "/images/projects/payments-08-payments-tab.png",
+    image: "/images/projects/payments-10-payments-overview.png",
   },
 ];

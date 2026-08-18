@@ -2,7 +2,7 @@ export const hero = {
   badge: "UX Research & Redesign · Shipped",
   title: "Player Profile: Six Teams, One Overloaded Screen — Redesigned",
   subtext:
-    "A mixed-methods research and redesign initiative for the Player Profile module inside BackOffice, a B2B iGaming SaaS platform serving operators across 3 regions. Sole UX researcher & designer. Shipped, live in production.",
+    "A mixed-methods research and redesign initiative for the Player Profile module inside BackOffice, a B2B iGaming SaaS platform serving operators across 3 regions. Lead product designer. Shipped, live in production.",
   stats: [
     { value: "24", label: "Practitioner Interviews" },
     { value: "96", label: "Survey Respondents" },

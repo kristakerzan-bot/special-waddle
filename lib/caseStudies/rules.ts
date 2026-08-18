@@ -11,7 +11,7 @@ export const hero = {
     { value: "8", label: "Attribute Categories (Fraud, Bonus, Compliance)" },
     { value: "11", label: "Action Types (Block / Account / Notify)" },
   ],
-  role: "Sole UX Designer",
+  role: "Lead Product Designer",
   status: "Shipped",
 };
 

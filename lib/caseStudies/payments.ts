@@ -11,7 +11,7 @@ export const hero = {
     { value: "3", label: "Payment Flows Shipped" },
     { value: "3", label: "Practitioner Scenarios" },
   ],
-  role: "Sole UX Researcher & Designer",
+  role: "Lead Product Designer",
 };
 
 export const methods = [

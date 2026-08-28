@@ -93,7 +93,7 @@ export const architecture = {
     { tier: "contextual", contains: "status.critical.* · ai.rail.* · density.*", job: "what job it does" },
   ],
   note: "A rebrand touches tier two. A theme touches tier three. A new product surface touches tier four. Nothing above tier one appears in a component.",
-  stat: "603 tokens · 2 themes · 3 densities. The migration lives in one last-merged file, and every entry cites the finding it closes — so the diff against the live Figma file stays readable instead of disappearing into a rebuild.",
+  stat: "632 tokens · 2 themes · 3 densities. The migration lives in one last-merged file, and every entry cites the finding it closes — so the diff against the live Figma file stays readable instead of disappearing into a rebuild.",
 };
 
 export const aiLayer = {
@@ -116,6 +116,8 @@ export const aiLayer = {
   ],
   footnote: "Rules one and two are checked by the audit. Rule three is enforced by the token names — there is no red confidence token to reach for.",
   components: "Components: insight card, confidence meter, citation chips back to system-of-record rows, human-in-the-loop review bar, query bar, streaming skeleton.",
+  chartsNote:
+    "The hue rule met its hardest case in charts. A four-series line chart needs four hues, and there are not four left once severity has claimed red, orange, amber, sky and green. The resolution is containment: inside a plot area hue means series identity, outside it hue means severity, and the boundary holds because a chart always carries a legend and direct labels. A chart that encodes state rather than identity uses the severity tokens instead. The four categorical slots were chosen by search over the palette and validated for colour-blind separation across all pairs, not just adjacent ones — an earlier six-hue set passed adjacent-pair checks while hiding a series-1-vs-series-3 collision.",
 };
 
 export const automatedAudit = {
@@ -161,6 +163,7 @@ export const validation = {
     { before: "Zero text styles; type sizes at 12.25px", after: "An integer type ramp with tabular figures for money and IDs" },
     { before: "Every table hardcoding its row height", after: "Density as a third mode dimension, composable per region" },
     { before: "No concept of AI provenance", after: "Three rules, two enforced on every build" },
+    { before: "Charts picking their own colours", after: "Four categorical slots, validated all-pairs for colour-blind separation" },
     { before: "Consistency depending on memory", after: "A CI check that fails the build" },
     { before: "\"We don't have a design system\"", after: "A documented, owned, measurable one — with the receipts" },
   ],
@@ -171,15 +174,16 @@ export const gallery: {
   caption: string;
   image: string | null;
 }[] = [
-  { label: "Player Profile — Light", caption: "The working screen at default density", image: null },
-  { label: "Player Profile — Dark / Compact", caption: "A derived theme, not an inverted one", image: null },
-  { label: "AI Insight Card", caption: "Provenance rail, label, confidence meter, citations, review bar", image: null },
-  { label: "Brand Ramp", caption: "Eleven steps", image: null },
-  { label: "Severity Ramp", caption: "Six severity levels — hue is reserved for risk", image: null },
-  { label: "AI Layer Rules", caption: "The three AI rules, two of them enforced on every build", image: null },
-  { label: "Typography", caption: "Integer steps, separate from the spacing grid", image: null },
-  { label: "Density", caption: "Density as a third mode dimension", image: null },
-  { label: "Contrast Matrix", caption: "Contrast computed from the built tokens, both themes", image: null },
+  { label: "Player Profile — Support", caption: "Player profile, Support role — the canonical screen", image: null },
+  { label: "Fraud & Risk Dashboard", caption: "Same player, Fraud & Risk role — severity vocabulary doing the work", image: null },
+  { label: "Responsible Gaming Limits", caption: "Responsible gaming limits — meters and thresholds", image: null },
+  { label: "Player Search", caption: "Search and filter — status chips at list scale", image: null },
+  { label: "Compare Players", caption: "Side-by-side comparison — density under load", image: null },
+  { label: "Payments Transactions", caption: "Transactions — one status vocabulary across every state", image: null },
+  { label: "Withdrawal Requests", caption: "Withdrawal queue — action colour carries consequence", image: null },
+  { label: "Payment Detail Drawer", caption: "Payment detail — lifecycle, remarks and integration logs in one drawer", image: null },
+  { label: "Process Payment", caption: "Confirmation before an irreversible action", image: null },
+  { label: "Decline Transaction", caption: "The destructive variant of the same pattern", image: null },
 ];
 
 export const closingLine =

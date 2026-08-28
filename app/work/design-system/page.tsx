@@ -288,6 +288,9 @@ export default function DesignSystemCaseStudy() {
           <p className="max-w-2xl font-sans text-[15px] leading-relaxed text-text-muted">
             {aiLayer.components}
           </p>
+          <p className="max-w-2xl font-sans text-[15px] leading-relaxed text-text-muted">
+            {aiLayer.chartsNote}
+          </p>
         </Reveal>
       </section>
 

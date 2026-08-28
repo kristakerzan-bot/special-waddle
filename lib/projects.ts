@@ -35,6 +35,15 @@ export const projects: Project[] = [
     coverImage: "/images/projects/rules-01-library.png",
     gallery: ["/images/projects/rules-01-library.png"],
   },
+  {
+    slug: "design-system",
+    category: "Design Systems & Tooling // Token Architecture",
+    title: "Design System",
+    summary:
+      "Audited an inherited, unowned design system, fixed the eight defects the rebrand left behind, and built the token pipeline, AI component layer, and automated audit that keep it from drifting again.",
+    coverImage: "/images/projects/design-system.svg",
+    gallery: ["/images/projects/design-system.svg"],
+  },
 ];
 
 export function getProject(slug: string): Project | undefined {
